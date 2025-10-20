@@ -29,8 +29,8 @@ export default function Rain() {
       opacity: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height - canvas.height;
+        this.x = Math.random() * (canvas?.width || window.innerWidth);
+        this.y = Math.random() * (canvas?.height || window.innerHeight) - (canvas?.height || window.innerHeight);
         this.length = Math.random() * 15 + 10;
         this.speed = Math.random() * 3 + 2;
         this.opacity = Math.random() * 0.3 + 0.1;
@@ -38,9 +38,9 @@ export default function Rain() {
 
       fall() {
         this.y += this.speed;
-        if (this.y > canvas.height) {
+        if (this.y > (canvas?.height || window.innerHeight)) {
           this.y = -this.length;
-          this.x = Math.random() * canvas.width;
+          this.x = Math.random() * (canvas?.width || window.innerWidth);
         }
       }
 
