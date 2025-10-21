@@ -34,6 +34,10 @@ export const translations = {
         title: 'בוטים חכמים',
         description: 'פיתוח בוטי AI מותאמים אישית לשירות לקוחות ואוטומציה עסקית',
       },
+      automations: {
+        title: 'אוטומציות',
+        description: 'אוטומציה של תהליכים עסקיים, ייצור לידים ושיווק אוטומטי',
+      },
     },
     about: {
       title: 'אודות errnio',
@@ -155,6 +159,10 @@ export const translations = {
       aibots: {
         title: 'AI Bots',
         description: 'Custom AI bot development for customer service and business automation',
+      },
+      automations: {
+        title: 'Automations',
+        description: 'Business process automation, lead generation flows, and automated marketing',
       },
     },
     about: {

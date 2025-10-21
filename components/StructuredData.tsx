@@ -80,6 +80,15 @@ export default function StructuredData() {
           "alternateName": "AI Bot Development",
           "description": "פיתוח בוטי AI מותאמים אישית לשירות לקוחות ואוטומציה עסקית"
         }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "אוטומציות",
+          "alternateName": "Business Automations",
+          "description": "אוטומציה של תהליכים עסקיים, ייצור לידים ושיווק אוטומטי"
+        }
       }
     ]
   };
