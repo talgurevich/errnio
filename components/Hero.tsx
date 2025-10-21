@@ -41,8 +41,8 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        {/* Dark overlay for better text visibility - 75% opacity */}
-        <div className="absolute inset-0 bg-black/75"></div>
+        {/* Dark overlay for better text visibility - 50% opacity */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       <motion.div
@@ -55,7 +55,7 @@ export default function Hero() {
         }}
         className="relative z-10 max-w-6xl mx-auto text-center space-y-4 px-6 py-16"
       >
-        <div className="animate-float neon-flicker mt-16 md:mt-24">
+        <div className="animate-float neon-flicker mt-24 md:mt-32 lg:mt-40">
           <Image
             src="/images/logo.png"
             alt="errnio"
