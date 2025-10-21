@@ -56,14 +56,21 @@ export default function Hero() {
         className="relative z-10 max-w-6xl mx-auto text-center space-y-4 px-6"
       >
         <div className="animate-float neon-flicker -mb-24">
-          <Image
-            src="/images/logo.png"
-            alt="errnio"
-            width={600}
-            height={310}
-            className="mx-auto"
-            priority
-          />
+          <a
+            href="https://www.youtube.com/watch?v=sYg9_6MYAOQ&t=300s"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block cursor-pointer"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="errnio"
+              width={600}
+              height={310}
+              className="mx-auto"
+              priority
+            />
+          </a>
         </div>
 
         <div className="animate-float" style={{ animationDelay: '0.5s' }}>
