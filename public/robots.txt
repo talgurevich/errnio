@@ -1,0 +1,10 @@
+# robots.txt for https://errn.io
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://errn.io/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

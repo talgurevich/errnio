@@ -1,11 +1,51 @@
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/lib/LanguageContext";
+import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "errnio vibe dev shop - AI-Powered Development",
-  description: "A digital development agency harnessing the power of AI to deliver cutting-edge web and mobile solutions for small and medium businesses.",
-  keywords: "AI development, web development, mobile apps, Next.js, React, Python, errnio",
+  title: "errnio - פיתוח אתרים ואפליקציות | Web & App Development",
+  description: "סוכנות פיתוח דיגיטלי המתמחה בפיתוח אתרים, אפליקציות אינטרנט, אפליקציות מובייל וחנויות מקוונות. שירותי פיתוח מונעי AI לעסקים בישראל. Digital development agency specializing in web development, web apps, mobile apps and e-commerce solutions.",
+  keywords: "פיתוח אתרים, פיתוח אפליקציות, בניית אתרים, פיתוח אפליקציות מובייל, חנות מקוונת, web development, app development, mobile apps, e-commerce, errnio, ארניו, בוסתן הגליל, ישראל",
+  authors: [{ name: "errnio technologies ltd." }],
+  creator: "errnio",
+  publisher: "errnio technologies ltd.",
+  metadataBase: new URL('https://errn.io'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'he': '/he',
+      'en': '/en',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'he_IL',
+    alternateLocale: 'en_US',
+    url: 'https://errn.io',
+    title: 'errnio - פיתוח אתרים ואפליקציות | Web & App Development',
+    description: 'סוכנות פיתוח דיגיטלי המתמחה בפיתוח אתרים, אפליקציות אינטרנט, אפליקציות מובייל וחנויות מקוונות. שירותי פיתוח מונעי AI לעסקים בישראל.',
+    siteName: 'errnio vibe dev shop',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'errnio - פיתוח אתרים ואפליקציות',
+    description: 'סוכנות פיתוח דיגיטלי המתמחה בפיתוח אתרים ואפליקציות בישראל',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
 export default function RootLayout({
@@ -15,6 +55,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="he" dir="rtl">
+      <head>
+        <StructuredData />
+        <link rel="canonical" href="https://errn.io" />
+      </head>
       <body>
         <LanguageProvider>
           {children}

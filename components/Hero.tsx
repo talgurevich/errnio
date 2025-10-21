@@ -55,7 +55,7 @@ export default function Hero() {
         }}
         className="relative z-10 max-w-6xl mx-auto text-center space-y-4 px-6"
       >
-        <div className="animate-float neon-flicker mb-4">
+        <div className="animate-float neon-flicker -mb-24">
           <Image
             src="/images/logo.png"
             alt="errnio"
