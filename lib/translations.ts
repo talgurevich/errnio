@@ -30,6 +30,10 @@ export const translations = {
         title: 'חנויות מקוונות',
         description: 'פלטפורמות מסחר אלקטרוני מלאות עם ניהול מוצרים ותשלומים',
       },
+      aibots: {
+        title: 'בוטים חכמים',
+        description: 'פיתוח בוטי AI מותאמים אישית לשירות לקוחות ואוטומציה עסקית',
+      },
     },
     about: {
       title: 'אודות errnio',
@@ -83,6 +87,10 @@ export const translations = {
         wallAura: {
           name: 'Wall Aura',
           description: 'חנות מקוונת למוצרי אמנות מתכת מעוצבים לקיר',
+        },
+        resumeBot: {
+          name: 'מסע אל האופק - קורות חיים',
+          description: 'בוט ChatGPT ליצירת קורות חיים מקצועיים בעברית',
         },
       },
     },
@@ -144,6 +152,10 @@ export const translations = {
         title: 'Online Shops',
         description: 'Complete e-commerce platforms with product and payment management',
       },
+      aibots: {
+        title: 'AI Bots',
+        description: 'Custom AI bot development for customer service and business automation',
+      },
     },
     about: {
       title: 'About errnio',
@@ -197,6 +209,10 @@ export const translations = {
         wallAura: {
           name: 'Wall Aura',
           description: 'E-commerce platform for artisan metal wall art and décor',
+        },
+        resumeBot: {
+          name: 'Journey to the Horizon - Resume',
+          description: 'ChatGPT bot for creating professional resumes in Hebrew',
         },
       },
     },

@@ -71,6 +71,15 @@ export default function StructuredData() {
           "alternateName": "E-commerce Development",
           "description": "פלטפורמות מסחר אלקטרוני מלאות עם ניהול מוצרים ותשלומים"
         }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "בוטים חכמים",
+          "alternateName": "AI Bot Development",
+          "description": "פיתוח בוטי AI מותאמים אישית לשירות לקוחות ואוטומציה עסקית"
+        }
       }
     ]
   };

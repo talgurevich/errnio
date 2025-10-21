@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "errnio - פיתוח אתרים ואפליקציות | Web & App Development",
   description: "סוכנות פיתוח דיגיטלי המתמחה בפיתוח אתרים, אפליקציות אינטרנט, אפליקציות מובייל וחנויות מקוונות. שירותי פיתוח מונעי AI לעסקים בישראל. Digital development agency specializing in web development, web apps, mobile apps and e-commerce solutions.",
-  keywords: "פיתוח אתרים, פיתוח אפליקציות, בניית אתרים, פיתוח אפליקציות מובייל, חנות מקוונת, web development, app development, mobile apps, e-commerce, errnio, ארניו, בוסתן הגליל, ישראל",
+  keywords: "פיתוח אתרים, פיתוח אפליקציות, בניית אתרים, פיתוח אפליקציות מובייל, חנות מקוונת, בוטים חכמים, AI bots, ChatGPT, web development, app development, mobile apps, e-commerce, AI automation, errnio, ארניו, בוסתן הגליל, ישראל",
   authors: [{ name: "errnio technologies ltd." }],
   creator: "errnio",
   publisher: "errnio technologies ltd.",

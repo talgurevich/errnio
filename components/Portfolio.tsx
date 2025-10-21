@@ -34,6 +34,11 @@ export default function Portfolio() {
       url: 'https://www.wallaura.art/',
       description: t.portfolio.projects.wallAura.description,
     },
+    {
+      name: t.portfolio.projects.resumeBot.name,
+      url: 'https://chatgpt.com/g/g-6841a251d9c481919c9b8839dd1829d2-ms-l-hvpq-bvnh-qvrvt-khyym-b-bryt',
+      description: t.portfolio.projects.resumeBot.description,
+    },
   ];
 
   return (
@@ -57,7 +62,7 @@ export default function Portfolio() {
 
           {/* Portfolio Grid */}
           {portfolioItems.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
               {portfolioItems.map((item, index) => (
                 <a
                   key={index}
