@@ -29,11 +29,16 @@ export default function Portfolio() {
       url: 'https://www.trainer-booking.com/',
       description: t.portfolio.projects.trainerBooking.description,
     },
+    {
+      name: t.portfolio.projects.wallAura.name,
+      url: 'https://www.wallaura.art/',
+      description: t.portfolio.projects.wallAura.description,
+    },
   ];
 
   return (
     <section id="portfolio" className="py-16 px-6 relative">
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Title */}
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-6">
           <span className="gradient-text neon-glow">{t.portfolio.title}</span>
@@ -52,7 +57,7 @@ export default function Portfolio() {
 
           {/* Portfolio Grid */}
           {portfolioItems.length > 0 ? (
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {portfolioItems.map((item, index) => (
                 <a
                   key={index}

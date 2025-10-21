@@ -26,6 +26,10 @@ export const translations = {
         title: 'אפליקציות מובייל',
         description: 'חוויות מובייל native וחוצות פלטפורמות',
       },
+      ecommerce: {
+        title: 'חנויות מקוונות',
+        description: 'פלטפורמות מסחר אלקטרוני מלאות עם ניהול מוצרים ותשלומים',
+      },
     },
     about: {
       title: 'אודות errnio',
@@ -75,6 +79,10 @@ export const translations = {
         trainerBooking: {
           name: 'Fitness Pro',
           description: 'פלטפורמת תזמון פגישות למאמנים אישיים',
+        },
+        wallAura: {
+          name: 'Wall Aura',
+          description: 'חנות מקוונת למוצרי אמנות מתכת מעוצבים לקיר',
         },
       },
     },
@@ -132,6 +140,10 @@ export const translations = {
         title: 'Mobile Apps',
         description: 'Native and cross-platform mobile experiences',
       },
+      ecommerce: {
+        title: 'Online Shops',
+        description: 'Complete e-commerce platforms with product and payment management',
+      },
     },
     about: {
       title: 'About errnio',
@@ -181,6 +193,10 @@ export const translations = {
         trainerBooking: {
           name: 'Fitness Pro',
           description: 'Appointment booking platform for fitness trainers',
+        },
+        wallAura: {
+          name: 'Wall Aura',
+          description: 'E-commerce platform for artisan metal wall art and décor',
         },
       },
     },

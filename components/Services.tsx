@@ -23,6 +23,11 @@ export default function Services() {
       description: t.services.mobile.description,
       icon: '/images/services/mobile.svg',
     },
+    {
+      title: t.services.ecommerce.title,
+      description: t.services.ecommerce.description,
+      icon: '/images/services/ecommerce.svg',
+    },
   ];
 
   return (
@@ -34,7 +39,7 @@ export default function Services() {
         </h2>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}

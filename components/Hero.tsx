@@ -26,7 +26,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex flex-col h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex flex-col min-h-screen items-center justify-center overflow-hidden py-20">
       {/* Background Image with Parallax */}
       <div
         className="absolute inset-0 z-0"
@@ -53,9 +53,9 @@ export default function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative z-10 max-w-6xl mx-auto text-center space-y-4 px-6 py-16"
+        className="relative z-10 max-w-6xl mx-auto text-center space-y-4 px-6"
       >
-        <div className="animate-float neon-flicker mt-24 md:mt-32 lg:mt-40">
+        <div className="animate-float neon-flicker mb-4">
           <Image
             src="/images/logo.png"
             alt="errnio"
