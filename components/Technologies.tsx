@@ -22,6 +22,10 @@ export default function Technologies() {
     { name: 'TypeScript', category: 'Language', logo: '/images/technologies/typescript.svg' },
     { name: 'Node.js', category: 'Backend', logo: '/images/technologies/nodejs.svg' },
     { name: 'Vercel', category: 'Infrastructure', logo: '/images/technologies/vercel.svg' },
+    { name: 'SendGrid', category: 'Communication', logo: '/images/technologies/sendgrid.svg' },
+    { name: 'Twilio', category: 'Communication', logo: '/images/technologies/twilio.svg' },
+    { name: 'Meta', category: 'Platform', logo: '/images/technologies/meta.svg' },
+    { name: 'Google', category: 'Platform', logo: '/images/technologies/google.svg' },
   ];
 
   return (
