@@ -96,6 +96,10 @@ export const translations = {
           name: 'מסע אל האופק - קורות חיים',
           description: 'בוט ChatGPT ליצירת קורות חיים מקצועיים בעברית',
         },
+        oshaBustan: {
+          name: 'אושה - בוסתן הגליל',
+          description: 'אתר לעסק מזון ומשקאות המציע פיצות, קפה איכותי וקוקטיילים',
+        },
       },
     },
     contact: {
@@ -221,6 +225,10 @@ export const translations = {
         resumeBot: {
           name: 'Journey to the Horizon - Resume',
           description: 'ChatGPT bot for creating professional resumes in Hebrew',
+        },
+        oshaBustan: {
+          name: 'OSHA - Bustan HaGalil',
+          description: 'Website for coffee cart featuring Neapolitan pizzas, quality coffee & cocktails',
         },
       },
     },
