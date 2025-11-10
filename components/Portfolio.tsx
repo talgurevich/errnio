@@ -46,6 +46,11 @@ export default function Portfolio() {
       url: 'https://www.osha-bustan.co.il/',
       description: t.portfolio.projects.oshaBustan.description,
     },
+    {
+      name: t.portfolio.projects.breadstationAkko.name,
+      url: 'https://www.breadstationakko.co.il/',
+      description: t.portfolio.projects.breadstationAkko.description,
+    },
   ];
 
   // Items per page based on screen size

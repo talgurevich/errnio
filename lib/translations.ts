@@ -100,6 +100,10 @@ export const translations = {
           name: 'אושה - בוסתן הגליל',
           description: 'אתר לעסק מזון ומשקאות המציע פיצות, קפה איכותי וקוקטיילים',
         },
+        breadstationAkko: {
+          name: 'תחנת הלחם עכו',
+          description: 'אתר הזמנות אירוח ומאפייה המתמחה במגשי אירוח, כריכים טריים ומאפים ביתיים',
+        },
       },
     },
     contact: {
@@ -229,6 +233,10 @@ export const translations = {
         oshaBustan: {
           name: 'OSHA - Bustan HaGalil',
           description: 'Website for coffee cart featuring Neapolitan pizzas, quality coffee & cocktails',
+        },
+        breadstationAkko: {
+          name: 'Breadstation Akko',
+          description: 'Catering & bakery ordering website specializing in platters, fresh sandwiches & homemade pastries',
         },
       },
     },
