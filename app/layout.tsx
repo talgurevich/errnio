@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import StructuredData from "@/components/StructuredData";
 import "./globals.css";
@@ -60,6 +61,20 @@ export default function RootLayout({
         <link rel="canonical" href="https://errn.io" />
       </head>
       <body>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WY93QTB6N0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WY93QTB6N0');
+          `}
+        </Script>
+
         <LanguageProvider>
           {children}
         </LanguageProvider>
