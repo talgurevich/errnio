@@ -26,6 +26,10 @@ export default function Technologies() {
     { name: 'Twilio', category: 'Communication', logo: '/images/technologies/twilio.svg' },
     { name: 'Meta', category: 'Platform', logo: '/images/technologies/meta.svg' },
     { name: 'Google', category: 'Platform', logo: '/images/technologies/google.svg' },
+    { name: 'Expo', category: 'Mobile', logo: '/images/technologies/expo.svg' },
+    { name: 'Payplus', category: 'Payment', logo: '/images/technologies/payplus.svg' },
+    { name: 'RevenueCat', category: 'Monetization', logo: '/images/technologies/revenuecat.svg' },
+    { name: 'ARBOX', category: 'Integration', logo: '/images/technologies/arbox.svg' },
   ];
 
   return (
