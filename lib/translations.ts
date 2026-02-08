@@ -120,6 +120,41 @@ export const translations = {
         error: 'משהו השתבש. אנא נסה שוב.',
       },
     },
+    landing: {
+      hero: {
+        title: 'אתר מקצועי עם מערכת ניהול — רק ₪450 לחודש',
+        subtitle: 'ללא עלות הקמה. אתר מותאם אישית + מערכת ניהול מלאה. מנוי חודשי פשוט.',
+        cta: 'רוצה לשמוע פרטים',
+      },
+      features: {
+        title: 'מה כולל החבילה',
+        website: {
+          title: 'אתר מותאם אישית',
+          description: 'עיצוב מודרני ורספונסיבי, מותאם למובייל',
+        },
+        backend: {
+          title: 'מערכת ניהול (Backend)',
+          description: 'ניהול תוכן, לקוחות ונתונים בקלות',
+        },
+        hosting: {
+          title: 'אחסון ותחזוקה',
+          description: 'אחסון, SSL, גיבויים ותחזוקה שוטפת',
+        },
+        support: {
+          title: 'ליווי ותמיכה',
+          description: 'תמיכה טכנית ועדכונים שוטפים',
+        },
+      },
+      whyUs: {
+        title: 'למה errnio?',
+        pills: ['מהירות', 'איכות', 'מחיר הוגן'],
+        description: 'אנחנו מתמחים בפיתוח פתרונות דיגיטליים לעסקים קטנים ובינוניים. עם ניסיון בפיתוח עשרות אתרים ואפליקציות, אנחנו יודעים בדיוק מה העסק שלך צריך כדי להצליח אונליין.',
+      },
+      portfolioHighlights: {
+        title: 'פרויקטים שלנו',
+        viewAll: 'לכל העבודות שלנו',
+      },
+    },
     footer: {
       tagline: ['הניאון אף פעם לא ישן.', 'גם לא החדשנות.'],
       links: 'קישורים',
@@ -252,6 +287,41 @@ export const translations = {
         sending: 'Sending...',
         success: 'Thank you! We will get back to you soon.',
         error: 'Something went wrong. Please try again.',
+      },
+    },
+    landing: {
+      hero: {
+        title: 'Professional Website + Backend — Just ₪450/month',
+        subtitle: 'No setup fee. Custom website + full backend system. Simple monthly subscription.',
+        cta: 'Get Details',
+      },
+      features: {
+        title: "What's Included",
+        website: {
+          title: 'Custom Website',
+          description: 'Modern, responsive design optimized for mobile',
+        },
+        backend: {
+          title: 'Backend System',
+          description: 'Manage content, clients, and data with ease',
+        },
+        hosting: {
+          title: 'Hosting & Maintenance',
+          description: 'Hosting, SSL, backups, and ongoing maintenance',
+        },
+        support: {
+          title: 'Support & Guidance',
+          description: 'Technical support and regular updates',
+        },
+      },
+      whyUs: {
+        title: 'Why errnio?',
+        pills: ['Speed', 'Quality', 'Fair Price'],
+        description: 'We specialize in building digital solutions for small and medium businesses. With experience developing dozens of websites and apps, we know exactly what your business needs to succeed online.',
+      },
+      portfolioHighlights: {
+        title: 'Our Projects',
+        viewAll: 'View all our work',
       },
     },
     footer: {
