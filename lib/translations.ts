@@ -109,6 +109,8 @@ export const translations = {
     contact: {
       title: 'בואו נדבר',
       subtitle: 'מוכנים להפוך את הרעיון שלכם למציאות?',
+      whatsapp: 'לא רוצים למלא טופס? דברו איתנו ישירות.',
+      whatsappButton: 'WhatsApp',
       form: {
         name: 'שם',
         email: 'אימייל',
@@ -278,6 +280,8 @@ export const translations = {
     contact: {
       title: "Let's Talk",
       subtitle: 'Ready to turn your idea into reality?',
+      whatsapp: "Don't want to fill out the form? Contact us directly.",
+      whatsappButton: 'WhatsApp',
       form: {
         name: 'Name',
         email: 'Email',
