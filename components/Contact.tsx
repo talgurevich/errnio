@@ -36,6 +36,13 @@ export default function Contact() {
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
+      // Google Ads conversion tracking
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-1062478822/VDWmCM6jjdYaEObH0PoD',
+        });
+      }
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
 
