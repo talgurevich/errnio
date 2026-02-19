@@ -157,6 +157,76 @@ export const translations = {
         viewAll: 'לכל העבודות שלנו',
       },
     },
+    landingInventory: {
+      hero: {
+        title: 'מערכת מלאי ומכירות מותאמת לעסק שלך — ₪7,500 + ₪450/חודש',
+        subtitle: 'מערכת ניהול מלאי, הזמנות ומכירות מלאה — מותאמת בדיוק לצרכים שלך. הקמה חד-פעמית ותחזוקה חודשית.',
+        cta: 'רוצה לשמוע פרטים',
+      },
+      features: {
+        title: 'מה כולל המערכת',
+        inventory: {
+          title: 'ניהול מלאי חכם',
+          description: 'מעקב מלאי בזמן אמת, התראות מלאי נמוך וניהול מוצרים',
+        },
+        sales: {
+          title: 'מערכת מכירות',
+          description: 'ניהול הזמנות, הנפקת חשבוניות ומעקב אחרי לקוחות',
+        },
+        dashboard: {
+          title: 'דשבורד וניתוח נתונים',
+          description: 'סטטיסטיקות מכירות, דוחות ותובנות עסקיות במבט אחד',
+        },
+        custom: {
+          title: 'התאמה אישית מלאה',
+          description: 'המערכת נבנית בדיוק לפי הצרכים והתהליכים של העסק שלך',
+        },
+      },
+      whyUs: {
+        title: 'למה errnio?',
+        pills: ['מותאם אישית', 'טכנולוגיה מתקדמת', 'ליווי צמוד'],
+        description: 'אנחנו מתמחים בבניית מערכות עסקיות מותאמות אישית — לא תוכנה גנרית מהמדף. עם ניסיון בפיתוח מערכות ניהול, מלאי ומכירות, אנחנו בונים בדיוק את מה שהעסק שלך צריך.',
+      },
+      portfolioHighlights: {
+        title: 'פרויקטים שלנו',
+        viewAll: 'לכל העבודות שלנו',
+      },
+    },
+    landingCrm: {
+      hero: {
+        title: 'מערכת CRM מותאמת לעסק שלך — ₪7,500 + ₪450/חודש',
+        subtitle: 'מערכת ניהול לקוחות, לידים ומכירות מלאה — מותאמת בדיוק לצרכים שלך. הקמה חד-פעמית ותחזוקה חודשית.',
+        cta: 'רוצה לשמוע פרטים',
+      },
+      features: {
+        title: 'מה כולל המערכת',
+        contacts: {
+          title: 'ניהול אנשי קשר',
+          description: 'ריכוז כל הלקוחות, הלידים ואנשי הקשר במקום אחד',
+        },
+        pipeline: {
+          title: 'ניהול צנרת מכירות',
+          description: 'מעקב שלבי מכירה, תזכורות ומשימות אוטומטיות',
+        },
+        analytics: {
+          title: 'דוחות וניתוח נתונים',
+          description: 'סטטיסטיקות מכירות, ביצועי צוות ותחזיות הכנסה',
+        },
+        custom: {
+          title: 'התאמה אישית מלאה',
+          description: 'המערכת נבנית בדיוק לפי תהליכי המכירה והשירות של העסק שלך',
+        },
+      },
+      whyUs: {
+        title: 'למה errnio?',
+        pills: ['מותאם אישית', 'טכנולוגיה מתקדמת', 'ליווי צמוד'],
+        description: 'אנחנו מתמחים בבניית מערכות CRM מותאמות אישית — לא תוכנה גנרית מהמדף. עם ניסיון בפיתוח מערכות ניהול לקוחות ומכירות, אנחנו בונים בדיוק את מה שהעסק שלך צריך.',
+      },
+      portfolioHighlights: {
+        title: 'פרויקטים שלנו',
+        viewAll: 'לכל העבודות שלנו',
+      },
+    },
     footer: {
       tagline: ['הניאון אף פעם לא ישן.', 'גם לא החדשנות.'],
       links: 'קישורים',
@@ -322,6 +392,76 @@ export const translations = {
         title: 'Why errnio?',
         pills: ['Speed', 'Quality', 'Fair Price'],
         description: 'We specialize in building digital solutions for small and medium businesses. With experience developing dozens of websites and apps, we know exactly what your business needs to succeed online.',
+      },
+      portfolioHighlights: {
+        title: 'Our Projects',
+        viewAll: 'View all our work',
+      },
+    },
+    landingInventory: {
+      hero: {
+        title: 'Custom Inventory & Sales System for Your Business — ₪7,500 + ₪450/mo',
+        subtitle: 'A complete inventory, orders & sales management system — tailored exactly to your needs. One-time setup + monthly maintenance.',
+        cta: 'Get Details',
+      },
+      features: {
+        title: "What's Included",
+        inventory: {
+          title: 'Smart Inventory Management',
+          description: 'Real-time stock tracking, low-stock alerts & product management',
+        },
+        sales: {
+          title: 'Sales System',
+          description: 'Order management, invoicing & customer tracking',
+        },
+        dashboard: {
+          title: 'Dashboard & Analytics',
+          description: 'Sales stats, reports & business insights at a glance',
+        },
+        custom: {
+          title: 'Fully Customized',
+          description: 'Built exactly around your business needs and workflows',
+        },
+      },
+      whyUs: {
+        title: 'Why errnio?',
+        pills: ['Custom-Built', 'Modern Tech', 'Hands-On Support'],
+        description: 'We specialize in building custom business systems — not generic off-the-shelf software. With experience developing inventory, sales and management systems, we build exactly what your business needs.',
+      },
+      portfolioHighlights: {
+        title: 'Our Projects',
+        viewAll: 'View all our work',
+      },
+    },
+    landingCrm: {
+      hero: {
+        title: 'Custom CRM System for Your Business — ₪7,500 + ₪450/mo',
+        subtitle: 'A complete customer, leads & sales management system — tailored exactly to your needs. One-time setup + monthly maintenance.',
+        cta: 'Get Details',
+      },
+      features: {
+        title: "What's Included",
+        contacts: {
+          title: 'Contact Management',
+          description: 'All your customers, leads & contacts centralized in one place',
+        },
+        pipeline: {
+          title: 'Sales Pipeline',
+          description: 'Stage tracking, reminders & automated tasks',
+        },
+        analytics: {
+          title: 'Reports & Analytics',
+          description: 'Sales stats, team performance & revenue forecasts',
+        },
+        custom: {
+          title: 'Fully Customized',
+          description: 'Built exactly around your sales and service workflows',
+        },
+      },
+      whyUs: {
+        title: 'Why errnio?',
+        pills: ['Custom-Built', 'Modern Tech', 'Hands-On Support'],
+        description: 'We specialize in building custom CRM systems — not generic off-the-shelf software. With experience developing customer management and sales systems, we build exactly what your business needs.',
       },
       portfolioHighlights: {
         title: 'Our Projects',
