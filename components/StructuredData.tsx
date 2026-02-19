@@ -11,7 +11,7 @@ export default function StructuredData() {
     "alternateName": ["ארניו טכנולוגיות בע\"מ", "errnio vibe dev shop"],
     "description": "סוכנות פיתוח דיגיטלי המתמחה בפיתוח אתרים, אפליקציות אינטרנט, אפליקציות מובייל וחנויות מקוונות",
     "url": "https://errn.io",
-    "telephone": "",
+    "telephone": "+972-50-442-5322",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bustan Hagalil",
