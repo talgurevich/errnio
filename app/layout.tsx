@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import StructuredData from "@/components/StructuredData";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -90,6 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <WhatsAppFloat />
       </body>
     </html>
   );
