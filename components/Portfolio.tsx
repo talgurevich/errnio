@@ -11,7 +11,7 @@ interface PortfolioItem {
   imageHeight?: number;
 }
 
-function BrowserMockup({ url, image, imageHeight }: { url: string; image: string; imageHeight: number }) {
+export function BrowserMockup({ url, image, imageHeight }: { url: string; image: string; imageHeight: number }) {
   const [isHovered, setIsHovered] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
