@@ -219,6 +219,41 @@ export const translations = {
         viewAll: 'לכל העבודות שלנו',
       },
     },
+    landingEcommerce: {
+      hero: {
+        title: 'חנות מקוונת מותאמת אישית לעסק שלך',
+        subtitle: 'חנות אינטרנטית מלאה עם ניהול מוצרים, סליקת תשלומים ומשלוחים — מותאמת בדיוק לצרכים שלך. הקמה חד-פעמית ותחזוקה חודשית.',
+        cta: 'רוצה לשמוע פרטים',
+      },
+      features: {
+        title: 'מה כוללת החנות',
+        catalog: {
+          title: 'קטלוג מוצרים',
+          description: 'ניהול מלא של מוצרים, קטגוריות, מחירים ומלאי במקום אחד',
+        },
+        payments: {
+          title: 'סליקת תשלומים',
+          description: 'חיבור לסליקה מאובטחת עם תמיכה בכרטיסי אשראי ואמצעי תשלום נוספים',
+        },
+        orders: {
+          title: 'ניהול הזמנות ומשלוחים',
+          description: 'מעקב הזמנות, עדכוני סטטוס אוטומטיים וניהול משלוחים',
+        },
+        design: {
+          title: 'עיצוב מותאם אישית',
+          description: 'עיצוב ייחודי שמתאים למותג שלך ומותאם לכל מכשיר',
+        },
+      },
+      whyUs: {
+        title: 'למה errnio?',
+        pills: ['מותאם אישית', 'טכנולוגיה מתקדמת', 'ליווי צמוד'],
+        description: 'אנחנו מתמחים בבניית חנויות מקוונות מותאמות אישית — לא תבניות גנריות מהמדף. עם ניסיון בפיתוח פתרונות מסחר אלקטרוני, אנחנו בונים בדיוק את מה שהעסק שלך צריך.',
+      },
+      portfolioHighlights: {
+        title: 'פרויקטים שלנו',
+        viewAll: 'לכל העבודות שלנו',
+      },
+    },
     footer: {
       tagline: ['הניאון אף פעם לא ישן.', 'גם לא החדשנות.'],
       links: 'קישורים',
@@ -446,6 +481,41 @@ export const translations = {
         title: 'Why errnio?',
         pills: ['Custom-Built', 'Modern Tech', 'Hands-On Support'],
         description: 'We specialize in building custom CRM systems — not generic off-the-shelf software. With experience developing customer management and sales systems, we build exactly what your business needs.',
+      },
+      portfolioHighlights: {
+        title: 'Our Projects',
+        viewAll: 'View all our work',
+      },
+    },
+    landingEcommerce: {
+      hero: {
+        title: 'Custom Online Store for Your Business',
+        subtitle: 'A complete e-commerce platform with product management, payment processing & shipping — tailored exactly to your needs. One-time setup + monthly maintenance.',
+        cta: 'Get Details',
+      },
+      features: {
+        title: "What's Included",
+        catalog: {
+          title: 'Product Catalog',
+          description: 'Full product management with categories, pricing & inventory in one place',
+        },
+        payments: {
+          title: 'Payment Processing',
+          description: 'Secure payment gateway integration with credit card and additional payment methods',
+        },
+        orders: {
+          title: 'Orders & Shipping',
+          description: 'Order tracking, automatic status updates & shipping management',
+        },
+        design: {
+          title: 'Custom Design',
+          description: 'Unique design that matches your brand and adapts to every device',
+        },
+      },
+      whyUs: {
+        title: 'Why errnio?',
+        pills: ['Custom-Built', 'Modern Tech', 'Hands-On Support'],
+        description: 'We specialize in building custom online stores — not generic off-the-shelf templates. With experience developing e-commerce solutions, we build exactly what your business needs.',
       },
       portfolioHighlights: {
         title: 'Our Projects',
