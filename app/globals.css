@@ -80,3 +80,9 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--neon-pink), var(--neon-blue));
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-screenshot {
+    transition: none !important;
+  }
+}
