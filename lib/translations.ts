@@ -76,17 +76,9 @@ export const translations = {
       subtitle: 'פרויקטים שיצרנו עבור לקוחות מרוצים',
       visitProject: 'בקר בפרויקט',
       projects: {
-        applicationTracker: {
-          name: 'Application Tracker Pro',
-          description: 'מערכת מתקדמת למעקב אחר מועמדויות לעבודה',
-        },
         hitQuote: {
           name: 'Hit Quote',
           description: 'מערכת ניהול הצעות מחיר מקצועית לעסקים',
-        },
-        trainerBooking: {
-          name: 'Fitness Pro',
-          description: 'פלטפורמת תזמון פגישות למאמנים אישיים',
         },
         wallAura: {
           name: 'Wall Aura',
@@ -96,13 +88,13 @@ export const translations = {
           name: 'מסע אל האופק - קורות חיים',
           description: 'בוט ChatGPT ליצירת קורות חיים מקצועיים בעברית',
         },
-        oshaBustan: {
-          name: 'אושה - בוסתן הגליל',
-          description: 'אתר לעסק מזון ומשקאות המציע פיצות, קפה איכותי וקוקטיילים',
-        },
         breadstationAkko: {
           name: 'תחנת הלחם עכו',
           description: 'אתר הזמנות אירוח ומאפייה המתמחה במגשי אירוח, כריכים טריים ומאפים ביתיים',
+        },
+        boutiqueYossef: {
+          name: 'בוטיק יוסף שטיחים',
+          description: 'חנות מקוונת לשטיחים איכותיים וצמחי נוי לעיצוב הבית',
         },
       },
     },
@@ -317,17 +309,9 @@ export const translations = {
       subtitle: 'Projects we built for happy clients',
       visitProject: 'Visit Project',
       projects: {
-        applicationTracker: {
-          name: 'Application Tracker Pro',
-          description: 'Advanced job application tracking system',
-        },
         hitQuote: {
           name: 'Hit Quote',
           description: 'Professional price quotation management for businesses',
-        },
-        trainerBooking: {
-          name: 'Fitness Pro',
-          description: 'Appointment booking platform for fitness trainers',
         },
         wallAura: {
           name: 'Wall Aura',
@@ -337,13 +321,13 @@ export const translations = {
           name: 'Journey to the Horizon - Resume',
           description: 'ChatGPT bot for creating professional resumes in Hebrew',
         },
-        oshaBustan: {
-          name: 'OSHA - Bustan HaGalil',
-          description: 'Website for coffee cart featuring Neapolitan pizzas, quality coffee & cocktails',
-        },
         breadstationAkko: {
           name: 'Breadstation Akko',
           description: 'Catering & bakery ordering website specializing in platters, fresh sandwiches & homemade pastries',
+        },
+        boutiqueYossef: {
+          name: 'Boutique Yossef Carpets',
+          description: 'E-commerce store for premium carpets and decorative plants for home design',
         },
       },
     },

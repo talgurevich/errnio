@@ -66,19 +66,19 @@ export default function LandingInventoryPage() {
 
   const portfolioHighlights = [
     {
-      name: t.portfolio.projects.oshaBustan.name,
-      description: t.portfolio.projects.oshaBustan.description,
-      url: 'https://www.osha-bustan.co.il/',
-    },
-    {
-      name: t.portfolio.projects.breadstationAkko.name,
-      description: t.portfolio.projects.breadstationAkko.description,
-      url: 'https://www.breadstationakko.co.il/',
-    },
-    {
       name: t.portfolio.projects.hitQuote.name,
       description: t.portfolio.projects.hitQuote.description,
       url: 'https://hitquote.online/',
+    },
+    {
+      name: t.portfolio.projects.wallAura.name,
+      description: t.portfolio.projects.wallAura.description,
+      url: 'https://www.wallaura.art/',
+    },
+    {
+      name: t.portfolio.projects.boutiqueYossef.name,
+      description: t.portfolio.projects.boutiqueYossef.description,
+      url: 'https://www.boutique-yossef.co.il/',
     },
   ];
 

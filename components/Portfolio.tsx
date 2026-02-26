@@ -17,19 +17,9 @@ export default function Portfolio() {
 
   const portfolioItems: PortfolioItem[] = [
     {
-      name: t.portfolio.projects.applicationTracker.name,
-      url: 'https://www.application-tracker.pro/',
-      description: t.portfolio.projects.applicationTracker.description,
-    },
-    {
       name: t.portfolio.projects.hitQuote.name,
       url: 'https://hitquote.online/',
       description: t.portfolio.projects.hitQuote.description,
-    },
-    {
-      name: t.portfolio.projects.trainerBooking.name,
-      url: 'https://www.trainer-booking.com/',
-      description: t.portfolio.projects.trainerBooking.description,
     },
     {
       name: t.portfolio.projects.wallAura.name,
@@ -42,14 +32,14 @@ export default function Portfolio() {
       description: t.portfolio.projects.resumeBot.description,
     },
     {
-      name: t.portfolio.projects.oshaBustan.name,
-      url: 'https://www.osha-bustan.co.il/',
-      description: t.portfolio.projects.oshaBustan.description,
-    },
-    {
       name: t.portfolio.projects.breadstationAkko.name,
       url: 'https://www.breadstationakko.co.il/',
       description: t.portfolio.projects.breadstationAkko.description,
+    },
+    {
+      name: t.portfolio.projects.boutiqueYossef.name,
+      url: 'https://www.boutique-yossef.co.il/',
+      description: t.portfolio.projects.boutiqueYossef.description,
     },
   ];
 
