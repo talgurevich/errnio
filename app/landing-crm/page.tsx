@@ -136,6 +136,12 @@ export default function LandingCrmPage() {
         </motion.div>
       </section>
 
+      {/* ===== PORTFOLIO HIGHLIGHTS SECTION ===== */}
+      <PortfolioHighlights
+        title={t.landingCrm.portfolioHighlights.title}
+        viewAllText={t.landingCrm.portfolioHighlights.viewAll}
+      />
+
       {/* ===== WHAT'S INCLUDED SECTION ===== */}
       <section className="py-20 px-6 relative">
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -219,12 +225,6 @@ export default function LandingCrmPage() {
           </motion.p>
         </div>
       </section>
-
-      {/* ===== PORTFOLIO HIGHLIGHTS SECTION ===== */}
-      <PortfolioHighlights
-        title={t.landingCrm.portfolioHighlights.title}
-        viewAllText={t.landingCrm.portfolioHighlights.viewAll}
-      />
 
       {/* ===== CONTACT SECTION ===== */}
       <Contact />

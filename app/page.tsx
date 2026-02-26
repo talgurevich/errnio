@@ -17,9 +17,9 @@ export default function Home() {
       <Rain />
       <HamburgerMenu />
       <Hero />
+      <Portfolio />
       <Services />
       <About />
-      <Portfolio />
       <Technologies />
       <Approach />
       <Contact />

@@ -136,6 +136,12 @@ export default function LandingPage() {
         </motion.div>
       </section>
 
+      {/* ===== PORTFOLIO HIGHLIGHTS SECTION ===== */}
+      <PortfolioHighlights
+        title={t.landing.portfolioHighlights.title}
+        viewAllText={t.landing.portfolioHighlights.viewAll}
+      />
+
       {/* ===== WHAT'S INCLUDED SECTION ===== */}
       <section className="py-20 px-6 relative">
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -219,12 +225,6 @@ export default function LandingPage() {
           </motion.p>
         </div>
       </section>
-
-      {/* ===== PORTFOLIO HIGHLIGHTS SECTION ===== */}
-      <PortfolioHighlights
-        title={t.landing.portfolioHighlights.title}
-        viewAllText={t.landing.portfolioHighlights.viewAll}
-      />
 
       {/* ===== CONTACT SECTION ===== */}
       <Contact />

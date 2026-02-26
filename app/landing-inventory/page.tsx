@@ -136,6 +136,12 @@ export default function LandingInventoryPage() {
         </motion.div>
       </section>
 
+      {/* ===== PORTFOLIO HIGHLIGHTS SECTION ===== */}
+      <PortfolioHighlights
+        title={t.landingInventory.portfolioHighlights.title}
+        viewAllText={t.landingInventory.portfolioHighlights.viewAll}
+      />
+
       {/* ===== WHAT'S INCLUDED SECTION ===== */}
       <section className="py-20 px-6 relative">
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -219,12 +225,6 @@ export default function LandingInventoryPage() {
           </motion.p>
         </div>
       </section>
-
-      {/* ===== PORTFOLIO HIGHLIGHTS SECTION ===== */}
-      <PortfolioHighlights
-        title={t.landingInventory.portfolioHighlights.title}
-        viewAllText={t.landingInventory.portfolioHighlights.viewAll}
-      />
 
       {/* ===== CONTACT SECTION ===== */}
       <Contact />
