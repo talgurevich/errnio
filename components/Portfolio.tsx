@@ -163,7 +163,7 @@ export default function Portfolio() {
       url: 'https://trainer-booking.com/',
       description: t.portfolio.projects.trainerBooking.description,
       image: '/images/portfolio/trainer-booking.webp',
-      imageHeight: 3703,
+      imageHeight: 2425,
     },
   ];
 
