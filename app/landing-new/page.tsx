@@ -100,25 +100,70 @@ export default function LandingNewPage() {
 
   return (
     <div dir="rtl" className="min-h-screen bg-white font-sans" style={{ fontFamily: "'Segoe UI', 'Arial', sans-serif" }}>
+      {/* Mesh gradient animation keyframes */}
+      <style>{`
+        @keyframes mesh-float-1 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(-30px, 40px) scale(1.1); }
+          66% { transform: translate(20px, -20px) scale(0.95); }
+        }
+        @keyframes mesh-float-2 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(40px, -30px) scale(1.05); }
+          66% { transform: translate(-20px, 30px) scale(1.1); }
+        }
+        @keyframes mesh-float-3 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(-50px, -20px) scale(1.15); }
+          66% { transform: translate(30px, 40px) scale(0.9); }
+        }
+      `}</style>
 
       {/* ============================================= */}
       {/* HERO SECTION */}
       {/* ============================================= */}
-      <section className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%)' }}>
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px',
-        }} />
+      <section className="relative overflow-hidden" style={{ background: '#0f172a', minHeight: '85vh' }}>
+        {/* Animated mesh gradient background */}
+        <div className="absolute inset-0">
+          {/* Base gradient */}
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }} />
+          {/* Animated blobs */}
+          <div
+            className="absolute rounded-full opacity-30 blur-3xl"
+            style={{
+              width: '600px', height: '600px',
+              background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
+              top: '-10%', right: '-10%',
+              animation: 'mesh-float-1 8s ease-in-out infinite',
+            }}
+          />
+          <div
+            className="absolute rounded-full opacity-20 blur-3xl"
+            style={{
+              width: '500px', height: '500px',
+              background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)',
+              bottom: '-15%', left: '-5%',
+              animation: 'mesh-float-2 10s ease-in-out infinite',
+            }}
+          />
+          <div
+            className="absolute rounded-full opacity-15 blur-3xl"
+            style={{
+              width: '400px', height: '400px',
+              background: 'radial-gradient(circle, #8b5cf6 0%, transparent 70%)',
+              top: '30%', left: '40%',
+              animation: 'mesh-float-3 12s ease-in-out infinite',
+            }}
+          />
+        </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-5 py-12 md:py-20 text-center">
-          {/* Logo */}
-          <div className="mb-8">
-            <img
-              src="/images/logo.png"
-              alt="errnio"
-              className="mx-auto h-14 md:h-16 w-auto"
-            />
+        <div className="relative z-10 max-w-4xl mx-auto px-5 py-16 md:py-24 text-center flex flex-col items-center justify-center" style={{ minHeight: '85vh' }}>
+          {/* Text Logo */}
+          <div className="mb-10">
+            <span className="text-3xl md:text-4xl font-extrabold tracking-tight">
+              <span className="text-white">errn</span>
+              <span style={{ color: '#38bdf8' }}>.io</span>
+            </span>
           </div>
 
           {/* Headline */}
