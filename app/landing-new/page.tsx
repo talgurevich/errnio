@@ -177,7 +177,7 @@ export default function LandingNewPage() {
           <p className="text-lg md:text-2xl text-blue-100 mb-4 max-w-2xl mx-auto leading-relaxed">
             אתר מקצועי עם מערכת ניהול, אחסון ותמיכה
             <br />
-            <strong className="text-white">מנוי חודשי פשוט. ללא עלות הקמה.</strong>
+            <strong className="text-white">מנוי חודשי פשוט. ללא עלות הקמה — במחיר שיפתיע אתכם.</strong>
           </p>
 
           {/* Trust badge */}
