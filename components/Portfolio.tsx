@@ -158,6 +158,13 @@ export default function Portfolio() {
       image: '/images/portfolio/boutique-yossef.webp',
       imageHeight: 5106,
     },
+    {
+      name: t.portfolio.projects.trainerBooking.name,
+      url: 'https://trainer-booking.com/',
+      description: t.portfolio.projects.trainerBooking.description,
+      image: '/images/portfolio/trainer-booking.webp',
+      imageHeight: 3703,
+    },
   ];
 
   return (

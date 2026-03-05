@@ -96,6 +96,10 @@ export const translations = {
           name: 'בוטיק יוסף שטיחים',
           description: 'חנות מקוונת לשטיחים איכותיים וצמחי נוי לעיצוב הבית',
         },
+        trainerBooking: {
+          name: 'FitnessPro - הזמנת מאמנים',
+          description: 'פלטפורמה לניהול הזמנות למאמני כושר עם סנכרון יומן Google ותזכורות SMS',
+        },
       },
     },
     contact: {
@@ -363,6 +367,10 @@ export const translations = {
         boutiqueYossef: {
           name: 'Boutique Yossef Carpets',
           description: 'E-commerce store for premium carpets and decorative plants for home design',
+        },
+        trainerBooking: {
+          name: 'FitnessPro - Trainer Booking',
+          description: 'Booking management platform for fitness trainers with Google Calendar sync and SMS reminders',
         },
       },
     },
