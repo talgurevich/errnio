@@ -176,12 +176,9 @@ export default function LandingNewPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-5 py-16 md:py-24 text-center flex flex-col items-center justify-center" style={{ minHeight: '85vh' }}>
-          {/* Text Logo */}
+          {/* Logo */}
           <div className="mb-10">
-            <span className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              <span className="text-white">errn</span>
-              <span style={{ color: '#38bdf8' }}>.io</span>
-            </span>
+            <img src="/images/logo-errn.webp" alt="errn.io" className="h-12 md:h-16" />
           </div>
 
           {/* Headline */}
