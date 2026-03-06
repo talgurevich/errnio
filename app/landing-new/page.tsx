@@ -129,6 +129,19 @@ export default function LandingNewPage() {
             src="/images/hero-workspace.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
+            style={{ transform: 'translateZ(0)' }}
+            ref={(el) => {
+              if (!el) return;
+              const handler = () => {
+                const scroll = window.scrollY;
+                const sectionHeight = el.closest('section')?.offsetHeight || 1;
+                if (scroll <= sectionHeight) {
+                  el.style.transform = `translateY(${scroll * 0.4}px)`;
+                }
+              };
+              window.addEventListener('scroll', handler, { passive: true });
+              (el as any)._cleanup = () => window.removeEventListener('scroll', handler);
+            }}
           />
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(30,41,59,0.80) 100%)' }} />
