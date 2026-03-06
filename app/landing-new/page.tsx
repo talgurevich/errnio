@@ -123,13 +123,18 @@ export default function LandingNewPage() {
       {/* HERO SECTION */}
       {/* ============================================= */}
       <section className="relative overflow-hidden" style={{ background: '#0f172a', minHeight: '85vh' }}>
-        {/* Animated mesh gradient background */}
+        {/* Background image with dark overlay */}
         <div className="absolute inset-0">
-          {/* Base gradient */}
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)' }} />
-          {/* Animated blobs */}
+          <img
+            src="/images/hero-workspace.webp"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(30,41,59,0.80) 100%)' }} />
+          {/* Animated blobs blended on top */}
           <div
-            className="absolute rounded-full opacity-30 blur-3xl"
+            className="absolute rounded-full opacity-20 blur-3xl"
             style={{
               width: '600px', height: '600px',
               background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
@@ -138,7 +143,7 @@ export default function LandingNewPage() {
             }}
           />
           <div
-            className="absolute rounded-full opacity-20 blur-3xl"
+            className="absolute rounded-full opacity-15 blur-3xl"
             style={{
               width: '500px', height: '500px',
               background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)',
@@ -147,7 +152,7 @@ export default function LandingNewPage() {
             }}
           />
           <div
-            className="absolute rounded-full opacity-15 blur-3xl"
+            className="absolute rounded-full opacity-10 blur-3xl"
             style={{
               width: '400px', height: '400px',
               background: 'radial-gradient(circle, #8b5cf6 0%, transparent 70%)',
