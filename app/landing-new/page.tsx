@@ -178,7 +178,9 @@ export default function LandingNewPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-5 py-16 md:py-24 text-center flex flex-col items-center justify-center" style={{ minHeight: '85vh' }}>
           {/* Logo */}
           <div className="mb-10">
-            <img src="/images/logo-errnio.webp" alt="errnio" className="h-16 md:h-24" />
+            <a href="/">
+              <img src="/images/logo-errnio.webp" alt="errnio" className="h-16 md:h-24" />
+            </a>
           </div>
 
           {/* Headline */}
@@ -355,7 +357,7 @@ export default function LandingNewPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
                 name: 'מסע אל האופק',
@@ -366,6 +368,11 @@ export default function LandingNewPage() {
                 name: 'Wall Aura',
                 rating: 5,
                 text: 'בנו לנו אתר מכירות מעולה שעדיין עובד חזק היום! שירות מצוין.',
+              },
+              {
+                name: 'Moran Marmus',
+                rating: 5,
+                text: 'מקצועיות ברמה הכי גבוה שיש, בזמן קצר מאוד הרימו לי אתר אינטרנט עם כל הדרישות שלי מעוצב מסודר ברור והכי חשוב שהיו זמינים לכל שינוי והערה שהיו לי! ממליץ בחום!!!!',
               },
             ].map((review, i) => (
               <div key={i} className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100">
