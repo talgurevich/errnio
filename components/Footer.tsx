@@ -85,7 +85,7 @@ export default function Footer() {
               {/* Google Maps Embed */}
               <div className="border border-neon-blue/30 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53418.88795486087!2d35.44866437832029!3d32.99019817431647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dbb9f4ce0e97b%3A0x6a47d5923e60e3a7!2sBustan%20HaGalil!5e0!3m2!1sen!2sil!4v1710000000000!5m2!1sen!2sil"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.0!2d35.081697!3d32.95602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dc93cf75b68b3%3A0x9d9e05b4b2c8f42!2serrnio!5e0!3m2!1sen!2sil!4v1710000000000!5m2!1sen!2sil"
                   width="100%"
                   height="150"
                   style={{ border: 0 }}
