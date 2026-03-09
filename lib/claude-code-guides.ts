@@ -1,0 +1,943 @@
+export interface GuideSection {
+  heading: string;
+  content: string;
+}
+
+export interface Guide {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  heroSubtitle: string;
+  sections: GuideSection[];
+  relatedSlugs: string[];
+}
+
+export const guides: Guide[] = [
+  {
+    slug: 'what-is-claude-code',
+    title: 'מה זה Claude Code? מדריך מלא בעברית',
+    metaDescription: 'מה זה Claude Code, איך הוא עובד, ולמה הוא הכלי הכי מתקדם לפיתוח עם AI. הסבר מלא בעברית למתחילים ומתקדמים.',
+    heroSubtitle: 'הכירו את הכלי שמשנה את הדרך שבה כותבים קוד',
+    sections: [
+      {
+        heading: 'מה זה Claude Code?',
+        content: `Claude Code הוא כלי שורת פקודה (CLI) של חברת Anthropic שמאפשר לעבוד עם הבינה המלאכותית Claude ישירות מה-Terminal. בניגוד ל-ChatGPT או ממשקי צ׳אט אחרים, Claude Code עובד ישירות על הקבצים בפרויקט שלכם — הוא יכול לקרוא, לערוך, ליצור ולמחוק קבצים, להריץ פקודות, ולבצע משימות מורכבות באופן אוטונומי.
+
+תחשבו על זה כמו מפתח בכיר שיושב לידכם ועובד איתכם על הקוד. אתם מתארים מה אתם רוצים, והוא מבצע — כולל חיפוש בקוד קיים, הבנת הארכיטקטורה, כתיבת קוד חדש, תיקון באגים, וכתיבת טסטים.`,
+      },
+      {
+        heading: 'איך Claude Code שונה מ-ChatGPT?',
+        content: `ההבדל המרכזי הוא שClaude Code עובד ישירות על הפרויקט שלכם. כשאתם עובדים עם ChatGPT, אתם מעתיקים קוד הלוך ושוב — מהעורך לצ׳אט ובחזרה. עם Claude Code, ה-AI רואה את כל הפרויקט, מבין את המבנה, ועורך את הקבצים ישירות.
+
+בנוסף, Claude Code יכול להריץ פקודות ב-Terminal — כמו npm install, git commit, או הרצת טסטים. זה אומר שהוא יכול לבדוק את עצמו, לתקן שגיאות, ולוודא שהקוד שהוא כותב באמת עובד.`,
+      },
+      {
+        heading: 'למי Claude Code מתאים?',
+        content: `Claude Code מתאים לכל מי שעובד עם קוד או רוצה להתחיל. מפתחים מנוסים ישתמשו בו כדי להאיץ את העבודה פי 5-10. יזמים ישתמשו בו כדי לבנות מוצרים בעצמם. ואפילו מי שלא מתכנת יכול להשתמש ב-Claude Code כדי לבנות אתרים, כלים ואוטומציות.
+
+הכלי מותאם לעבודה עם כל שפת תכנות — JavaScript, Python, TypeScript, Go, Rust, ועוד. הוא עובד מצוין עם frameworks כמו Next.js, React, Django, ו-FastAPI.`,
+      },
+      {
+        heading: 'היתרונות המרכזיים של Claude Code',
+        content: `• עבודה ישירה על הקבצים — בלי העתקה-הדבקה
+• הבנת הקשר מלאה של הפרויקט — קורא את כל הקוד הרלוונטי
+• הרצת פקודות — טסטים, build, git, ועוד
+• עבודה אוטונומית — נותנים משימה ומקבלים תוצאה
+• תמיכה בכלים חיצוניים דרך MCP — חיבור ל-GitHub, Slack, databases ועוד
+• CLAUDE.md — קובץ הגדרות שמלמד את ה-AI על הפרויקט שלכם`,
+      },
+    ],
+    relatedSlugs: ['installation', 'beginners-guide', 'pricing', 'vs-cursor-copilot'],
+  },
+  {
+    slug: 'installation',
+    title: 'התקנת Claude Code — מדריך התקנה שלב אחרי שלב',
+    metaDescription: 'מדריך התקנה מלא של Claude Code בעברית. התקנה על Mac, Linux ו-Windows עם כל ההגדרות הנדרשות.',
+    heroSubtitle: 'מאפס ועד Claude Code עובד — תוך 5 דקות',
+    sections: [
+      {
+        heading: 'דרישות מקדימות',
+        content: `לפני שמתחילים, ודאו שיש לכם:
+
+• Node.js גרסה 18 ומעלה — ניתן להוריד מ-nodejs.org
+• חשבון Anthropic עם מנוי Claude Pro/Max או API key
+• Terminal — מובנה ב-Mac ו-Linux, ב-Windows מומלץ WSL
+
+אם אתם לא בטוחים אם Node.js מותקן, פתחו Terminal והקלידו: node --version`,
+      },
+      {
+        heading: 'התקנה עם npm',
+        content: `ההתקנה פשוטה ולוקחת דקה. פתחו Terminal והריצו:
+
+npm install -g @anthropic-ai/claude-code
+
+זה יתקין את Claude Code גלובלית על המחשב. אחרי ההתקנה, תוכלו להריץ את הפקודה claude מכל תיקייה.`,
+      },
+      {
+        heading: 'הגדרת חשבון ואימות',
+        content: `אחרי ההתקנה, הריצו:
+
+claude
+
+בפעם הראשונה, Claude Code יבקש מכם להתחבר לחשבון Anthropic. יש שתי אפשרויות:
+
+1. מנוי Claude Pro/Max — התחברות דרך הדפדפן עם חשבון claude.ai
+2. API Key — הזנת מפתח API מ-console.anthropic.com
+
+שתי האפשרויות עובדות מצוין. מנוי Pro הוא הפשוט ביותר למי שכבר משלם על Claude.`,
+      },
+      {
+        heading: 'בדיקה שהכל עובד',
+        content: `נכנסים לתיקייה של פרויקט כלשהו ומריצים:
+
+claude
+
+אם הכל הותקן כמו שצריך, תראו את ממשק Claude Code ותוכלו להתחיל לעבוד. נסו לשאול משהו פשוט כמו "תסביר לי את המבנה של הפרויקט הזה" כדי לוודא שהכל עובד.`,
+      },
+      {
+        heading: 'התקנה על Windows',
+        content: `ב-Windows, מומלץ להשתמש ב-WSL (Windows Subsystem for Linux). זה נותן לכם Terminal של Linux ישירות בתוך Windows.
+
+1. פתחו PowerShell כמנהל והריצו: wsl --install
+2. הפעילו מחדש את המחשב
+3. פתחו את Ubuntu מתפריט ההתחלה
+4. התקינו Node.js: sudo apt update && sudo apt install nodejs npm
+5. התקינו Claude Code: npm install -g @anthropic-ai/claude-code
+
+לחלופין, אפשר להשתמש ב-Claude Code ישירות דרך VS Code או IDEs אחרים שתומכים ב-Terminal משולב.`,
+      },
+    ],
+    relatedSlugs: ['what-is-claude-code', 'beginners-guide', 'api-key-setup', 'common-errors'],
+  },
+  {
+    slug: 'pricing',
+    title: 'Claude Code מחיר — כמה עולה ומה כולל כל מסלול?',
+    metaDescription: 'מדריך מחירים מלא של Claude Code בעברית. השוואת מסלולים — Pro, Max, API. כמה זה עולה באמת ומה הכי משתלם.',
+    heroSubtitle: 'כל מה שצריך לדעת על המחירים ומסלולי התשלום',
+    sections: [
+      {
+        heading: 'איך משלמים על Claude Code?',
+        content: `Claude Code עצמו הוא חינמי — אתם מתקינים אותו בלי עלות. מה שעולה כסף הוא השימוש במודל Claude שמריץ את הכל מאחורי הקלעים. יש שתי דרכים לשלם:
+
+1. מנוי Claude Pro / Max — תשלום חודשי קבוע
+2. API — תשלום לפי שימוש בפועל`,
+      },
+      {
+        heading: 'מנוי Claude Pro',
+        content: `מחיר: $20 לחודש
+
+מנוי Pro נותן גישה ל-Claude Code עם מכסת שימוש יומית. זו האפשרות הפשוטה ביותר — משלמים סכום קבוע ומתחילים לעבוד. מתאים למי שמשתמש ב-Claude Code כמה שעות ביום.
+
+היתרון הגדול: אתם כבר מקבלים גישה גם ל-claude.ai (הצ׳אט), כך שזה עסקה טובה אם אתם משתמשים בשניהם.`,
+      },
+      {
+        heading: 'מנוי Claude Max',
+        content: `מחיר: $100 או $200 לחודש
+
+למי שעובד עם Claude Code באינטנסיביות. מנוי Max נותן מכסת שימוש גדולה בהרבה — מתאים למפתחים שעובדים כל היום עם הכלי. המסלול של $200 מספק כמעט שימוש בלתי מוגבל.`,
+      },
+      {
+        heading: 'API — תשלום לפי שימוש',
+        content: `אם אתם מעדיפים לשלם רק על מה שאתם משתמשים, אפשר לעבוד עם API key. המחיר מחושב לפי כמות ה-tokens (מילים, בערך) שנשלחים ומתקבלים.
+
+המחירים משתנים לפי המודל:
+• Claude Sonnet — הכי משתלם, מעולה לרוב המשימות
+• Claude Opus — הכי חכם, למשימות מורכבות
+
+לשימוש ממוצע, עלות ה-API נעה בין $5-50 לחודש, תלוי בכמות העבודה.`,
+      },
+      {
+        heading: 'מה הכי משתלם?',
+        content: `למתחילים — מנוי Pro ב-$20/חודש. פשוט, צפוי, ומספיק לרוב האנשים.
+
+למפתחים שעובדים הרבה עם Claude Code — מנוי Max. העלות גבוהה יותר אבל השקט הנפשי שווה את זה.
+
+לצוותים ולחברות — API. שליטה מלאה בעלויות ואפשרות לשלב בתהליכי עבודה אוטומטיים.`,
+      },
+    ],
+    relatedSlugs: ['what-is-claude-code', 'installation', 'api-key-setup', 'for-businesses'],
+  },
+  {
+    slug: 'vs-cursor-copilot',
+    title: 'Claude Code מול Cursor מול GitHub Copilot — השוואה מלאה',
+    metaDescription: 'השוואה מפורטת בין Claude Code, Cursor ו-GitHub Copilot. איזה כלי AI לקוד הכי מתאים לכם? יתרונות, חסרונות ומחירים.',
+    heroSubtitle: 'איזה כלי AI לפיתוח הכי מתאים לכם?',
+    sections: [
+      {
+        heading: 'שלושת הכלים הגדולים',
+        content: `שוק כלי ה-AI לפיתוח תוכנה מוצף באפשרויות, אבל שלושה כלים בולטים מעל כולם: Claude Code של Anthropic, Cursor (עורך קוד מבוסס AI), ו-GitHub Copilot של Microsoft. כל אחד מהם מציע גישה שונה — בואו נשווה.`,
+      },
+      {
+        heading: 'Claude Code — ה-Agent האוטונומי',
+        content: `Claude Code עובד מ-Terminal ומבצע משימות שלמות באופן עצמאי. אתם מתארים מה אתם רוצים — "תוסיף דף התחברות עם Google OAuth" — והוא קורא את הקוד, מבין את הארכיטקטורה, כותב את הקוד, ומריץ טסטים.
+
+יתרונות:
+• משימות מורכבות מקצה לקצה
+• הבנת הקשר מלאה של הפרויקט
+• הרצת פקודות ובדיקה עצמית
+• עובד עם כל עורך קוד
+
+חסרונות:
+• דורש Terminal — לא מובנה בעורך
+• עקומת למידה תלולה יותר`,
+      },
+      {
+        heading: 'Cursor — העורך החכם',
+        content: `Cursor הוא fork של VS Code עם AI מובנה. הוא מציע השלמה אוטומטית, צ׳אט בתוך העורך, ועריכה של קוד ישירות.
+
+יתרונות:
+• חוויית משתמש חלקה בתוך העורך
+• השלמה אוטומטית מצוינת
+• קל ללמידה
+
+חסרונות:
+• פחות אוטונומי מ-Claude Code
+• תלוי בעורך ספציפי
+• פחות טוב במשימות מורכבות שדורשות שינויים במספר קבצים`,
+      },
+      {
+        heading: 'GitHub Copilot — ההשלמה האוטומטית',
+        content: `Copilot מתמקד בהשלמה אוטומטית חכמה. הוא יושב בתוך העורך ומציע שורות קוד תוך כדי כתיבה.
+
+יתרונות:
+• אינטגרציה מושלמת עם VS Code ו-JetBrains
+• מהיר מאוד — הצעות בזמן אמת
+• מחיר נמוך ($10/חודש)
+
+חסרונות:
+• מוגבל להשלמות — לא מבצע משימות שלמות
+• לא מבין את הפרויקט בצורה מעמיקה
+• פחות יעיל לשינויים גדולים`,
+      },
+      {
+        heading: 'אז מה לבחור?',
+        content: `אם אתם רוצים כלי שיעשה את העבודה בשבילכם — Claude Code. הוא הכי חזק למשימות מורכבות ולבנייה של פיצ׳רים שלמים.
+
+אם אתם רוצים חוויה חלקה בתוך העורך — Cursor. מעולה לעבודה יומיומית עם השלמה חכמה.
+
+אם אתם רוצים משהו פשוט וזול — Copilot. טוב להשלמה אוטומטית בזמן כתיבה.
+
+טיפ: הרבה מפתחים משתמשים בשילוב — Claude Code למשימות גדולות ו-Cursor/Copilot לכתיבה יומיומית.`,
+      },
+    ],
+    relatedSlugs: ['what-is-claude-code', 'pricing', 'beginners-guide', 'for-freelancers'],
+  },
+  {
+    slug: 'beginners-guide',
+    title: 'מדריך למתחילים ב-Claude Code — מאפס לפרודקטיביות',
+    metaDescription: 'מדריך מלא למתחילים ב-Claude Code. למדו את הבסיס, טיפים לעבודה יעילה, וטעויות נפוצות שכדאי להימנע מהן.',
+    heroSubtitle: 'כל מה שצריך לדעת כדי להתחיל לעבוד עם Claude Code',
+    sections: [
+      {
+        heading: 'צעדים ראשונים',
+        content: `אחרי שהתקנתם את Claude Code (ראו מדריך התקנה), הגיע הזמן להתחיל לעבוד. הנה הצעדים הראשונים:
+
+1. פתחו Terminal ונווטו לתיקיית פרויקט
+2. הקלידו claude ולחצו Enter
+3. Claude Code יסרוק את הפרויקט ויהיה מוכן לעזור
+
+הדבר הראשון שכדאי לעשות — לבקש מ-Claude Code להסביר את מבנה הפרויקט. זה עוזר גם לכם וגם ל-AI להבין את ההקשר.`,
+      },
+      {
+        heading: 'איך לתת הוראות טובות',
+        content: `המפתח לעבודה יעילה עם Claude Code הוא לתת הוראות ברורות ומפורטות. במקום "תתקן את הבאג", נסו:
+
+"יש באג בדף ההתחברות — כשמשתמש מזין סיסמה לא נכונה, הוא לא מקבל הודעת שגיאה. תמצא את הקוד הרלוונטי ותוסיף הודעת שגיאה מתאימה."
+
+טיפים:
+• תארו את המטרה, לא רק את הפעולה
+• תנו הקשר — באיזה חלק של הפרויקט, מה הבעיה
+• אם יש לכם העדפה לגבי הפתרון, ציינו אותה`,
+      },
+      {
+        heading: 'טעויות נפוצות של מתחילים',
+        content: `1. הוראות מעורפלות — "תשפר את הקוד" לא עוזר. תהיו ספציפיים.
+
+2. לא לקרוא מה Claude Code עושה — תמיד בדקו את השינויים לפני שמאשרים. Claude Code מראה לכם מה הוא מתכנן לעשות.
+
+3. לא להשתמש ב-CLAUDE.md — קובץ CLAUDE.md בתיקיית הפרויקט מלמד את Claude Code על הפרויקט שלכם. זה משפר מאוד את התוצאות.
+
+4. לא לבקש הסברים — אם לא מבינים מה Claude Code עשה, בקשו הסבר. זו דרך מצוינת ללמוד.`,
+      },
+      {
+        heading: 'תהליך עבודה מומלץ',
+        content: `1. הגדירו CLAUDE.md בפרויקט (ראו מדריך CLAUDE.md)
+2. התחילו עם משימות קטנות וברורות
+3. בדקו את התוצאות אחרי כל משימה
+4. בנו ביטחון ועברו למשימות גדולות יותר
+5. השתמשו ב-git commit אחרי כל שינוי מוצלח
+
+ככל שתעבדו יותר עם Claude Code, תלמדו מה עובד ומה לא. זה כלי שמשתפר ככל שאתם מבינים איך לתקשר איתו.`,
+      },
+    ],
+    relatedSlugs: ['installation', 'prompting', 'claude-md', 'what-is-claude-code'],
+  },
+  {
+    slug: 'claude-md',
+    title: 'CLAUDE.md — איך להגדיר את Claude Code לפרויקט שלכם',
+    metaDescription: 'מדריך מלא ל-CLAUDE.md בעברית. למדו איך להגדיר את Claude Code לעבוד מושלם עם הפרויקט שלכם.',
+    heroSubtitle: 'הקובץ הכי חשוב בפרויקט שלכם',
+    sections: [
+      {
+        heading: 'מה זה CLAUDE.md?',
+        content: `CLAUDE.md הוא קובץ טקסט שמניחים בתיקייה הראשית של הפרויקט. Claude Code קורא אותו אוטומטית בכל פעם שמתחילים שיחה חדשה. הוא מכיל הנחיות, מידע על הפרויקט, וכללים שClaude Code צריך לעקוב אחריהם.
+
+תחשבו על זה כמו onboarding document למפתח חדש — רק שהמפתח הוא AI.`,
+      },
+      {
+        heading: 'מה לכלול ב-CLAUDE.md',
+        content: `קובץ CLAUDE.md טוב כולל:
+
+• תיאור קצר של הפרויקט — מה הוא עושה, מי משתמש בו
+• טכנולוגיות — Next.js 15, React, Tailwind CSS, וכו׳
+• מבנה תיקיות — איפה נמצאים הקבצים החשובים
+• כללי קוד — conventions, סגנון כתיבה, naming
+• פקודות חשובות — איך להריץ, לבנות, לבדוק
+• דברים שאסור לעשות — "אל תשנה קבצי config" או "אל תמחק טסטים"`,
+      },
+      {
+        heading: 'דוגמה ל-CLAUDE.md',
+        content: `הנה דוגמה לקובץ CLAUDE.md טיפוסי:
+
+# Project: MyApp
+
+## Overview
+אפליקציית ניהול משימות בנויה עם Next.js 15 ו-TypeScript.
+
+## Tech Stack
+- Next.js 15 (App Router)
+- React 18, TypeScript
+- Tailwind CSS 3
+- Prisma + PostgreSQL
+
+## Structure
+- app/ — pages and layouts
+- components/ — reusable UI components
+- lib/ — utilities and helpers
+- prisma/ — database schema
+
+## Commands
+- npm run dev — development server
+- npm run build — production build
+- npm test — run tests
+
+## Rules
+- Always use TypeScript
+- Use Tailwind for styling, never inline styles
+- Write tests for new features
+- Commit messages in English`,
+      },
+      {
+        heading: 'טיפים מתקדמים',
+        content: `• שמרו על הקובץ מעודכן — כשמוסיפים טכנולוגיות או משנים מבנה, עדכנו את CLAUDE.md
+• אפשר ליצור CLAUDE.md בתיקיות פנימיות — Claude Code יקרא את שניהם
+• השתמשו בפורמט Markdown — כותרות, רשימות, קוד
+• היו ספציפיים — "השתמש ב-date-fns לפורמוט תאריכים" עדיף על "פרמט תאריכים נכון"`,
+      },
+    ],
+    relatedSlugs: ['beginners-guide', 'prompting', 'skills-hooks', 'what-is-claude-code'],
+  },
+  {
+    slug: 'prompting',
+    title: 'Prompting ב-Claude Code — איך לתת הוראות שמקבלות תוצאות',
+    metaDescription: 'למדו איך לכתוב prompts אפקטיביים ב-Claude Code. טיפים, דוגמאות ושיטות מוכחות לתקשורת יעילה עם AI.',
+    heroSubtitle: 'האמנות של לתת הוראות נכונות ל-AI',
+    sections: [
+      {
+        heading: 'למה Prompting חשוב?',
+        content: `Claude Code חכם מאוד, אבל הוא לא קורא מחשבות. ההבדל בין תוצאה מצוינת לתוצאה גרועה הוא לרוב איכות ההוראות שנתתם. prompt טוב חוסך זמן, מפחית טעויות, ומוביל לקוד טוב יותר.`,
+      },
+      {
+        heading: 'עקרונות בסיסיים',
+        content: `1. היו ספציפיים — "תוסיף כפתור כחול עם טקסט ׳שמור׳ בפינה הימנית העליונה" עדיף על "תוסיף כפתור שמירה"
+
+2. תנו הקשר — "בקומפוננטה של עגלת הקניות, תוסיף שדה קופון. הקופונים נשמרים בטבלת coupons ב-database"
+
+3. תארו את התוצאה הרצויה — "אחרי השינוי, המשתמש צריך לראות הודעת הצלחה ולחזור לדף הראשי"
+
+4. ציינו מגבלות — "תשתמש רק ב-Tailwind CSS, בלי CSS נפרד" או "אל תשנה את ה-API"`,
+      },
+      {
+        heading: 'דוגמאות לפרומפטים טובים',
+        content: `❌ "תתקן את הבאג"
+✅ "יש באג בטופס ההרשמה — כשמזינים אימייל לא תקין ולוחצים שלח, הטופס נשלח בלי ולידציה. תוסיף ולידציה לשדה האימייל עם הודעת שגיאה בעברית."
+
+❌ "תעשה את הדף יותר יפה"
+✅ "תשפר את העיצוב של דף הנחיתה — תוסיף רווחים בין הסקציות, תגדיל את הכותרת הראשית, ותוסיף אנימציית fade-in בגלילה."
+
+❌ "תוסיף פיצ׳ר"
+✅ "תוסיף אפשרות למשתמש לייצא את ההזמנות שלו כקובץ CSV. הכפתור צריך להופיע בדף ההזמנות, ליד הטבלה. הקובץ צריך לכלול תאריך, מוצר, כמות ומחיר."`,
+      },
+      {
+        heading: 'טכניקות מתקדמות',
+        content: `• שאלו לפני שמבקשים — "תסביר לי איך עובד ה-authentication בפרויקט" ואז "עכשיו תוסיף Google OAuth"
+• חלקו משימות גדולות — במקום "תבנה מערכת ניהול מלאה", חלקו ל-"תבנה את הטבלה", "תוסיף חיפוש", "תוסיף עריכה"
+• בקשו review — "תעבור על הקוד ב-components/Cart.tsx ותגיד לי אם יש בעיות"
+• בקשו חלופות — "תציע שתי דרכים לממש את הפיצ׳ר הזה ותסביר את היתרונות של כל אחת"`,
+      },
+    ],
+    relatedSlugs: ['beginners-guide', 'claude-md', 'what-is-claude-code', 'build-website'],
+  },
+  {
+    slug: 'mcp-servers',
+    title: 'MCP Servers ב-Claude Code — מדריך מלא בעברית',
+    metaDescription: 'מדריך מלא ל-MCP (Model Context Protocol) ב-Claude Code. למדו לחבר כלים חיצוניים כמו GitHub, databases, ו-APIs.',
+    heroSubtitle: 'חברו את Claude Code לכל כלי שתרצו',
+    sections: [
+      {
+        heading: 'מה זה MCP?',
+        content: `MCP — Model Context Protocol — הוא פרוטוקול שמאפשר ל-Claude Code להתחבר לכלים וסרביסים חיצוניים. בעזרת MCP, Claude Code יכול לעבוד עם GitHub, לקרוא מ-databases, לשלוח הודעות ב-Slack, לנהל deployments, ועוד.
+
+תחשבו על MCP כמו plugins — כל MCP server מוסיף יכולות חדשות ל-Claude Code.`,
+      },
+      {
+        heading: 'איך מגדירים MCP Server',
+        content: `ההגדרה נעשית בקובץ ההגדרות של Claude Code. אפשר להגדיר MCP servers גלובלית (לכל הפרויקטים) או לפרויקט ספציפי.
+
+להגדרה גלובלית, ערכו את הקובץ:
+~/.claude/settings.json
+
+להגדרה לפרויקט, צרו קובץ:
+.claude/settings.json בתיקיית הפרויקט
+
+הפורמט:
+{
+  "mcpServers": {
+    "server-name": {
+      "command": "npx",
+      "args": ["@anthropic/mcp-server-name"],
+      "env": {
+        "API_KEY": "your-key"
+      }
+    }
+  }
+}`,
+      },
+      {
+        heading: 'MCP Servers פופולריים',
+        content: `• GitHub — ניהול issues, PRs, repositories ישירות מ-Claude Code
+• Filesystem — גישה לקבצים מחוץ לתיקיית הפרויקט
+• PostgreSQL / MySQL — שאילתות ישירות מול ה-database
+• Slack — שליחת הודעות וניהול ערוצים
+• Puppeteer — גלישה באינטרנט וצילומי מסך
+• Google Calendar — ניהול יומן
+• Vercel — ניהול deployments
+
+כל MCP server מוסיף כלים ספציפיים ש-Claude Code יכול להשתמש בהם. למשל, MCP של GitHub מוסיף את היכולת ליצור PR, לסגור issue, או לעשות code review.`,
+      },
+      {
+        heading: 'יצירת MCP Server משלכם',
+        content: `אם יש לכם כלי פנימי או API ייחודי, אתם יכולים ליצור MCP Server משלכם. הפרוטוקול הוא פתוח ומתועד.
+
+MCP Server הוא בעצם תוכנה קטנה שמקבלת בקשות מ-Claude Code ומחזירה תוצאות. אפשר לכתוב אותו ב-TypeScript, Python, או כל שפה אחרת.
+
+זו דרך מצוינת לחבר את Claude Code למערכות הפנימיות של החברה שלכם.`,
+      },
+    ],
+    relatedSlugs: ['skills-hooks', 'claude-md', 'beginners-guide', 'for-businesses'],
+  },
+  {
+    slug: 'skills-hooks',
+    title: 'Skills ו-Hooks ב-Claude Code — אוטומציה ויכולות מותאמות',
+    metaDescription: 'מדריך ל-Skills ו-Hooks ב-Claude Code. למדו ליצור פקודות מותאמות אישית ואוטומציות שחוסכות זמן.',
+    heroSubtitle: 'הפכו פעולות חוזרות לפקודות אוטומטיות',
+    sections: [
+      {
+        heading: 'מה זה Skills?',
+        content: `Skills הם פקודות מותאמות אישית ב-Claude Code שמרחיבים את היכולות שלו. כל Skill הוא בעצם prompt מוכן מראש שאפשר להפעיל עם פקודת slash.
+
+למשל, אפשר ליצור Skill שנקרא /deploy שמריץ את כל תהליך ה-deployment, או /review שעושה code review לפי הסטנדרטים של הצוות שלכם.`,
+      },
+      {
+        heading: 'יצירת Skill',
+        content: `Skills נשמרים כקבצי Markdown בתיקייה:
+.claude/skills/
+
+כל קובץ הוא Skill אחד. השם של הקובץ הוא שם הפקודה. לדוגמה:
+
+.claude/skills/deploy.md:
+---
+description: Deploy the project to production
+---
+Run the following steps:
+1. Run all tests
+2. Build the project
+3. Deploy to production using the deploy script
+4. Verify the deployment is working
+
+כשמקלידים /deploy בתוך Claude Code, ה-Skill מופעל אוטומטית.`,
+      },
+      {
+        heading: 'מה זה Hooks?',
+        content: `Hooks הם סקריפטים שרצים אוטומטית בתגובה לאירועים ב-Claude Code. לדוגמה:
+
+• לפני שClaude Code מריץ פקודה — אפשר להוסיף בדיקות אבטחה
+• אחרי שClaude Code עורך קובץ — אפשר להריץ linter אוטומטית
+• לפני commit — אפשר לוודא שכל הטסטים עוברים
+
+Hooks מגדירים בקובץ ההגדרות ומאפשרים שליטה מלאה על מה ש-Claude Code עושה.`,
+      },
+      {
+        heading: 'דוגמאות שימושיות',
+        content: `Skills פופולריים:
+• /commit — יוצר commit עם הודעה מתאימה
+• /test — מריץ את כל הטסטים ומתקן שגיאות
+• /refactor — עושה refactoring לקובץ מסוים לפי best practices
+• /translate — מתרגם טקסטים בפרויקט
+
+Hooks שימושיים:
+• הרצת prettier אחרי כל עריכת קובץ
+• בדיקת TypeScript types אחרי שינויים
+• עדכון CHANGELOG אוטומטי`,
+      },
+    ],
+    relatedSlugs: ['mcp-servers', 'claude-md', 'git-workflow', 'beginners-guide'],
+  },
+  {
+    slug: 'git-workflow',
+    title: 'עבודה עם Git ב-Claude Code — מדריך מלא',
+    metaDescription: 'איך לעבוד עם Git ב-Claude Code. commits, branches, pull requests — כל מה שצריך לדעת על ניהול גרסאות עם AI.',
+    heroSubtitle: 'ניהול גרסאות חכם עם AI',
+    sections: [
+      {
+        heading: 'Claude Code ו-Git',
+        content: `Claude Code מבין Git לעומק ויכול לעזור בכל שלב בתהליך — מ-commits ועד pull requests. הוא יכול לראות מה השתנה, להבין את ההיסטוריה, וליצור commits עם הודעות ברורות.`,
+      },
+      {
+        heading: 'Commits חכמים',
+        content: `אחרי שClaude Code מבצע שינויים, אתם יכולים לבקש ממנו לעשות commit. הוא ינתח את כל השינויים ויכתוב הודעת commit מתאימה.
+
+פשוט כתבו: "תעשה commit לשינויים"
+
+Claude Code:
+1. יבדוק מה השתנה (git diff)
+2. יכתוב הודעת commit ברורה ומתארת
+3. יוסיף את הקבצים הרלוונטיים ל-staging
+4. יבצע את ה-commit
+
+טיפ: בקשו מ-Claude Code לעשות commit אחרי כל משימה שהושלמה. ככה תמיד תוכלו לחזור אחורה אם משהו לא עבד.`,
+      },
+      {
+        heading: 'עבודה עם Branches',
+        content: `אפשר לבקש מ-Claude Code ליצור branches, לעבור ביניהם, ולמזג שינויים. לדוגמה:
+
+"צור branch חדש בשם feature/user-profile ועבור אליו"
+"מזג את ה-branch הנוכחי ל-main"
+"תראה לי מה ההבדלים בין ה-branch שלי ל-main"
+
+Claude Code גם יכול לפתור merge conflicts — הוא קורא את שני הצדדים ובוחר את הפתרון הנכון (או שואל אתכם).`,
+      },
+      {
+        heading: 'Pull Requests',
+        content: `עם MCP של GitHub, Claude Code יכול ליצור pull requests שלמים — כולל כותרת, תיאור, ותיוג. הוא מנתח את כל ה-commits ב-branch ויוצר תיאור ברור של השינויים.
+
+"צור pull request ל-main עם תיאור של כל השינויים"
+
+הוא גם יכול לעשות code review על PRs של אחרים ולהשאיר תגובות מפורטות.`,
+      },
+    ],
+    relatedSlugs: ['beginners-guide', 'skills-hooks', 'mcp-servers', 'build-website'],
+  },
+  {
+    slug: 'build-website',
+    title: 'בניית אתר עם Claude Code — מדריך מלא',
+    metaDescription: 'למדו איך לבנות אתר מאפס עם Claude Code. מדריך שלב אחרי שלב לבניית אתר מקצועי עם AI.',
+    heroSubtitle: 'מרעיון לאתר חי — עם עזרה של AI',
+    sections: [
+      {
+        heading: 'למה לבנות אתר עם Claude Code?',
+        content: `בניית אתר עם Claude Code מאפשרת להגיע לתוצאה מקצועית בזמן קצר בהרבה מפיתוח מסורתי. Claude Code יכול ליצור דפים, קומפוננטות, ניווט, טפסים, ואינטגרציות — כל מה שצריך לאתר מלא.
+
+הוא עובד מצוין עם frameworks כמו Next.js, React, ו-Tailwind CSS, ויכול ליצור אתרים רספונסיביים ומעוצבים.`,
+      },
+      {
+        heading: 'שלב 1: הגדרת הפרויקט',
+        content: `התחילו עם יצירת פרויקט Next.js חדש:
+
+npx create-next-app@latest my-website
+cd my-website
+claude
+
+בקשו מ-Claude Code ליצור קובץ CLAUDE.md עם הגדרות הפרויקט — טכנולוגיות, סגנון עיצוב, ומבנה הדפים שאתם רוצים.`,
+      },
+      {
+        heading: 'שלב 2: בניית הדפים',
+        content: `עכשיו אפשר לבנות דף אחרי דף. לדוגמה:
+
+"תבנה דף נחיתה עם:
+- Hero section עם כותרת, תת-כותרת וכפתור CTA
+- סקציית שירותים עם 3 כרטיסיות
+- סקציית ביקורות לקוחות
+- טופס יצירת קשר
+- Footer
+
+השתמש ב-Tailwind CSS, עיצוב מודרני ונקי, צבעים כחולים."
+
+Claude Code ייצור את כל הקוד — HTML, CSS, ו-JavaScript — ויכתוב אותו ישירות לקבצים.`,
+      },
+      {
+        heading: 'שלב 3: שיפורים',
+        content: `אחרי שהשלד מוכן, אפשר לשפר:
+
+• "תוסיף אנימציות חלקות בגלילה"
+• "תוודא שהאתר נראה טוב במובייל"
+• "תוסיף SEO — title, description, ו-Open Graph tags"
+• "תוסיף Google Analytics"
+• "תבנה דף 404 מעוצב"
+
+כל בקשה = שיפור מיידי. זה כמו לעבוד עם מפתח שעונה תוך שניות.`,
+      },
+      {
+        heading: 'דוגמאות מהשטח',
+        content: `באתר errn.io בנינו עשרות אתרים עם Claude Code — חנויות מקוונות, דפי נחיתה, מערכות ניהול, ועוד. כל האתרים בפורטפוליו שלנו נבנו עם עזרה של Claude Code.
+
+הכלי מאפשר לנו לספק אתרים מקצועיים בזמן קצר ובמחיר נגיש — ועכשיו גם אתם יכולים.`,
+      },
+    ],
+    relatedSlugs: ['beginners-guide', 'prompting', 'ecommerce', 'for-businesses'],
+  },
+  {
+    slug: 'ecommerce',
+    title: 'בניית חנות מקוונת עם Claude Code — מדריך מלא',
+    metaDescription: 'איך לבנות חנות אונליין עם Claude Code. עגלת קניות, תשלומים, ניהול מוצרים — מדריך שלב אחרי שלב.',
+    heroSubtitle: 'חנות מקוונת מקצועית — עם AI',
+    sections: [
+      {
+        heading: 'למה לבנות חנות עם Claude Code?',
+        content: `בניית חנות מקוונת דורשת המון עבודה — קטלוג מוצרים, עגלת קניות, תשלומים, ניהול הזמנות, ועוד. Claude Code יכול לעשות את רוב העבודה הזו בשבילכם.
+
+במקום לשלם אלפי שקלים למפתח או להסתפק בתבנית גנרית ב-Shopify, אתם יכולים לבנות חנות מותאמת אישית בדיוק לפי הצרכים שלכם.`,
+      },
+      {
+        heading: 'מה Claude Code יכול לבנות',
+        content: `• דפי מוצר מעוצבים עם תמונות, מחירים ותיאורים
+• עגלת קניות עם עדכון בזמן אמת
+• תהליך checkout מאובטח
+• אינטגרציה עם שירותי תשלום (Stripe, PayPal)
+• פאנל ניהול להוספת ועריכת מוצרים
+• סינון וחיפוש מוצרים
+• מערכת קופונים והנחות
+• דפים רספונסיביים למובייל`,
+      },
+      {
+        heading: 'טכנולוגיות מומלצות',
+        content: `לחנות מקוונת, השילוב הכי טוב הוא:
+
+• Next.js — framework מהיר ו-SEO friendly
+• Tailwind CSS — עיצוב מהיר ומותאם אישית
+• Stripe — תשלומים מאובטחים
+• Prisma + PostgreSQL — ניהול מוצרים והזמנות
+• Cloudinary — ניהול תמונות
+
+Claude Code מכיר את כל הטכנולוגיות האלה ויכול לבנות את האינטגרציות מאפס.`,
+      },
+      {
+        heading: 'דוגמאות מהפורטפוליו שלנו',
+        content: `בנינו מספר חנויות מקוונות עם Claude Code:
+
+• Wall Aura — חנות למוצרי אמנות מתכת לקיר
+• בוטיק יוסף — חנות לשטיחים איכותיים ועיצוב הבית
+
+כל חנות נבנתה מאפס עם עיצוב מותאם אישית, מערכת ניהול, ותשלומים מאובטחים. זו בדיוק הרמה שגם אתם יכולים להגיע אליה.`,
+      },
+    ],
+    relatedSlugs: ['build-website', 'for-businesses', 'beginners-guide', 'prompting'],
+  },
+  {
+    slug: 'for-businesses',
+    title: 'Claude Code לעסקים — איך AI יכול להאיץ את העסק שלכם',
+    metaDescription: 'איך עסקים יכולים להשתמש ב-Claude Code לבנות אתרים, כלים ואוטומציות. חסכו זמן וכסף עם AI.',
+    heroSubtitle: 'הכלי שמשנה את הכללים לעסקים',
+    sections: [
+      {
+        heading: 'למה עסקים צריכים להכיר את Claude Code',
+        content: `בעולם שבו כל עסק צריך נוכחות דיגיטלית, Claude Code הוא game changer. הוא מאפשר לבנות ולתחזק אתרים, כלים דיגיטליים ואוטומציות בעלות נמוכה בהרבה מפיתוח מסורתי.
+
+עסקים שמשתמשים ב-Claude Code יכולים להגיב מהר יותר לשוק, לבנות פיצ׳רים חדשים בימים במקום שבועות, ולחסוך עשרות אלפי שקלים בפיתוח.`,
+      },
+      {
+        heading: 'מה אפשר לבנות לעסק',
+        content: `• אתר עסקי מקצועי
+• חנות מקוונת
+• מערכת CRM פשוטה
+• דפי נחיתה לקמפיינים
+• מערכת הזמנות
+• דשבורדים ודוחות
+• אוטומציות — מיילים, תזכורות, עדכונים
+• כלים פנימיים לצוות`,
+      },
+      {
+        heading: 'היתרון הכלכלי',
+        content: `מפתח freelance עולה 150-300 ₪ לשעה. פרויקט אתר עסקי עולה 5,000-20,000 ₪. עם Claude Code, אדם אחד עם ידע בסיסי יכול לבנות אותו דבר בשבריר מהזמן והעלות.
+
+אפילו אם אתם שוכרים מפתח — מפתח שעובד עם Claude Code מספיק הרבה יותר. זה אומר פחות שעות פיתוח ועלות נמוכה יותר לפרויקט.`,
+      },
+      {
+        heading: 'איך מתחילים',
+        content: `הדרך הקלה ביותר להתחיל היא ללמוד את הבסיס בשיעור אישי. בשעה אחת תבינו איך הכלי עובד ותוכלו להתחיל לבנות בעצמכם.
+
+אם אתם מעדיפים שמישהו יבנה בשבילכם — ב-errnio אנחנו בונים אתרים ומערכות עם Claude Code במחיר נגיש ובזמן מהיר.`,
+      },
+    ],
+    relatedSlugs: ['what-is-claude-code', 'pricing', 'build-website', 'for-non-developers'],
+  },
+  {
+    slug: 'for-non-developers',
+    title: 'Claude Code בלי ניסיון בתכנות — האם זה אפשרי?',
+    metaDescription: 'האם אפשר להשתמש ב-Claude Code בלי לדעת לתכנת? מדריך מלא בעברית למי שלא מגיע מעולם הפיתוח.',
+    heroSubtitle: 'אתם לא צריכים להיות מתכנתים',
+    sections: [
+      {
+        heading: 'התשובה הקצרה: כן',
+        content: `Claude Code נוצר בשביל מפתחים, אבל הוא הפך לכלי שגם אנשים בלי רקע טכני יכולים להשתמש בו. למה? כי הוא עושה את העבודה הטכנית בשבילכם. אתם מתארים מה אתם רוצים בשפה טבעית, והוא כותב את הקוד.
+
+זה כמו ההבדל בין לנהוג מכונית לבין לבנות מכונית. אתם לא צריכים להבין איך המנוע עובד כדי לנהוג — ואתם לא צריכים לדעת JavaScript כדי לבנות אתר עם Claude Code.`,
+      },
+      {
+        heading: 'מה כן צריך לדעת',
+        content: `• איך לפתוח Terminal ולהקליד פקודות בסיסיות
+• מושגים בסיסיים — מה זה קובץ, תיקייה, server
+• אנגלית בסיסית — חלק מהמונחים הם באנגלית
+• סבלנות — לפעמים צריך כמה ניסיונות עד שמקבלים בדיוק מה שרצינו
+
+זה הכל. אתם לא צריכים לדעת Python, JavaScript, או כל שפת תכנות אחרת.`,
+      },
+      {
+        heading: 'דוגמה: בניית אתר בלי לדעת קוד',
+        content: `הנה איך זה נראה בפועל:
+
+אתם: "תבנה לי אתר לעסק של עיצוב פנים. הדף הראשי עם Hero מרשים, גלריית עבודות, טופס יצירת קשר, ותפריט ניווט."
+
+Claude Code: יוצר את כל הקבצים, כותב את הקוד, ומראה לכם את התוצאה.
+
+אתם: "תשנה את הצבע הראשי לירוק כהה, ותוסיף עוד 3 תמונות לגלריה."
+
+Claude Code: מעדכן את העיצוב בשניות.
+
+זה באמת כזה פשוט. אתם מתארים, הוא בונה.`,
+      },
+      {
+        heading: 'טיפים למי שלא מתכנת',
+        content: `• התחילו עם משהו קטן — דף נחיתה פשוט, לא מערכת מורכבת
+• תארו בפירוט — ככל שתהיו יותר ספציפיים, התוצאה תהיה יותר טובה
+• אל תפחדו לבקש שינויים — "תשנה את זה", "תגדיל את זה", "מוצא חן בעיניי אבל..."
+• למדו מה Claude Code עושה — בקשו הסברים, זו דרך מצוינת ללמוד
+• שקלו שיעור אישי — שעה של הדרכה חוסכת ימים של ניסוי וטעייה`,
+      },
+    ],
+    relatedSlugs: ['what-is-claude-code', 'beginners-guide', 'build-website', 'for-businesses'],
+  },
+  {
+    slug: 'for-freelancers',
+    title: 'Claude Code לפרילנסרים — כך תעבדו מהר יותר ותרוויחו יותר',
+    metaDescription: 'איך פרילנסרים יכולים להשתמש ב-Claude Code להגדיל את ההכנסה ולספק יותר פרויקטים. טיפים ושיטות עבודה.',
+    heroSubtitle: 'הכלי הסודי של פרילנסרים מצליחים',
+    sections: [
+      {
+        heading: 'למה פרילנסרים חייבים להכיר את Claude Code',
+        content: `כפרילנסר, הזמן שלכם שווה כסף — ממש. כל שעה שאתם חוסכים בפיתוח היא שעה שאתם יכולים לספק ללקוח נוסף או לבלות עם המשפחה. Claude Code מאפשר להאיץ את העבודה פי 3-5 בלי לפגוע באיכות.`,
+      },
+      {
+        heading: 'יתרונות לפרילנסרים',
+        content: `• ספקו פרויקטים מהר יותר — מה שלקח שבוע לוקח יום
+• קחו יותר פרויקטים — אותו זמן, יותר הכנסה
+• הציעו שירותים שלא הצעתם לפני — מערכות ניהול, אוטומציות
+• שפרו את האיכות — Claude Code כותב קוד נקי ומתועד
+• הפחיתו burnout — פחות עבודה רפטטיבית, יותר עבודה יצירתית`,
+      },
+      {
+        heading: 'תהליך עבודה מומלץ',
+        content: `1. קבלו brief מהלקוח
+2. הגדירו CLAUDE.md עם דרישות הפרויקט
+3. בנו את השלד עם Claude Code
+4. שפרו ובצעו התאמות
+5. הציגו ללקוח ועשו revision cycles עם Claude Code
+6. Deploy ומסירה
+
+כל שלב מלווה ב-git commits — כך שתמיד תוכלו לחזור אחורה אם הלקוח משנה דעה.`,
+      },
+      {
+        heading: 'תמחור חכם',
+        content: `אל תורידו מחירים כי אתם עובדים מהר יותר. הלקוח משלם על התוצאה, לא על השעות. אם בנינו אתר תוך יומיים במקום שבועיים, האתר שווה אותו דבר.
+
+טיפ: תמחרו פר-פרויקט ולא פר-שעה. ככה אתם מרוויחים מהיעילות שClaude Code נותן.`,
+      },
+    ],
+    relatedSlugs: ['build-website', 'ecommerce', 'for-businesses', 'prompting'],
+  },
+  {
+    slug: 'common-errors',
+    title: 'שגיאות נפוצות ב-Claude Code — ופתרונות',
+    metaDescription: 'פתרונות לשגיאות נפוצות ב-Claude Code. authentication errors, rate limits, ובעיות התקנה — הכל בעברית.',
+    heroSubtitle: 'נתקלתם בשגיאה? כאן תמצאו את הפתרון',
+    sections: [
+      {
+        heading: 'שגיאות התקנה',
+        content: `"npm ERR! EACCES: permission denied"
+פתרון: הריצו עם sudo (Mac/Linux):
+sudo npm install -g @anthropic-ai/claude-code
+
+או שנו הרשאות npm — חפשו "npm fix permissions" בגוגל.
+
+"node: command not found"
+פתרון: Node.js לא מותקן. הורידו אותו מ-nodejs.org ונסו שוב.
+
+"claude: command not found"
+פתרון: ההתקנה לא הצליחה, או ש-npm global bin לא ב-PATH. נסו להתקין מחדש.`,
+      },
+      {
+        heading: 'שגיאות אימות',
+        content: `"Authentication failed" / "Invalid API key"
+פתרון: ודאו שה-API key שלכם תקף. היכנסו ל-console.anthropic.com ובדקו.
+
+"Rate limit exceeded"
+פתרון: הגעתם למכסת השימוש. אם אתם על Pro, חכו לחידוש היומי. אם API — בדקו את ה-billing.
+
+"Subscription required"
+פתרון: צריך מנוי Claude Pro/Max או API key עם credits. חשבון חינמי לא מספיק.`,
+      },
+      {
+        heading: 'שגיאות בזמן עבודה',
+        content: `"Context window exceeded" / הודעה ארוכה מדי
+פתרון: ההקשר גדול מדי. התחילו שיחה חדשה (claude) ותנו הוראות ממוקדות יותר.
+
+"File not found" / "Permission denied" על קבצים
+פתרון: ודאו שאתם בתיקייה הנכונה ושיש לכם הרשאות לקבצים.
+
+Claude Code לא רואה שינויים שעשיתם
+פתרון: אם ערכתם קבצים בעורך חיצוני, Claude Code כבר רואה אותם. אם עדיין יש בעיה, התחילו שיחה חדשה.`,
+      },
+      {
+        heading: 'בעיות ביצועים',
+        content: `Claude Code עובד לאט
+פתרון: בדקו את חיבור האינטרנט. Claude Code שולח ומקבל הרבה מידע, אז חיבור יציב חשוב.
+
+Claude Code נתקע באמצע
+פתרון: לחצו Ctrl+C לביטול, והתחילו שוב. אם הבעיה חוזרת, זה עשוי להיות בעיית שרת זמנית של Anthropic.
+
+תוצאות לא טובות
+פתרון: שפרו את ה-prompt (ראו מדריך Prompting). תנו יותר הקשר ותהיו יותר ספציפיים.`,
+      },
+    ],
+    relatedSlugs: ['installation', 'troubleshooting', 'api-key-setup', 'beginners-guide'],
+  },
+  {
+    slug: 'troubleshooting',
+    title: 'Claude Code לא עובד? מדריך פתרון בעיות',
+    metaDescription: 'Claude Code לא עובד? מדריך מלא לפתרון בעיות — התקנה, אימות, חיבור, וביצועים. פתרונות מהירים בעברית.',
+    heroSubtitle: 'פתרון מהיר לכל בעיה',
+    sections: [
+      {
+        heading: 'בדיקות בסיסיות',
+        content: `לפני שמתחילים, בדקו את הדברים הבסיסיים:
+
+1. האם Node.js מותקן? הריצו: node --version (צריך 18+)
+2. האם Claude Code מותקן? הריצו: claude --version
+3. האם יש חיבור אינטרנט תקין?
+4. האם יש לכם חשבון Anthropic פעיל?
+
+אם אחת מהבדיקות נכשלת — מצאתם את הבעיה.`,
+      },
+      {
+        heading: 'Claude Code לא מתחבר',
+        content: `אם Claude Code לא מצליח להתחבר:
+
+1. נסו להתנתק ולהתחבר מחדש:
+   claude logout
+   claude login
+
+2. בדקו שה-API key תקף (אם משתמשים ב-API)
+
+3. בדקו אם יש firewall או VPN שחוסם את החיבור
+
+4. נסו לעדכן לגרסה האחרונה:
+   npm update -g @anthropic-ai/claude-code`,
+      },
+      {
+        heading: 'Claude Code מתנהג מוזר',
+        content: `אם Claude Code נותן תשובות לא רלוונטיות או מתעלם מהוראות:
+
+• התחילו שיחה חדשה — לפעמים ההקשר מתבלבל
+• בדקו את CLAUDE.md — אולי יש הוראות סותרות
+• תנו הוראות יותר ספציפיות
+• ציינו במפורש מה לא לעשות
+
+אם הבעיה חוזרת, ייתכן שהמשימה מורכבת מדי. חלקו אותה למשימות קטנות יותר.`,
+      },
+      {
+        heading: 'עדיין לא עובד?',
+        content: `אם ניסיתם הכל ועדיין יש בעיה:
+
+• בדקו את Anthropic Status Page — אולי יש תקלה כללית
+• חפשו ב-GitHub Issues של Claude Code
+• שאלו בקהילות מפתחים (Discord, Reddit)
+• צרו קשר איתנו — נשמח לעזור בשיעור אישי`,
+      },
+    ],
+    relatedSlugs: ['common-errors', 'installation', 'api-key-setup', 'what-is-claude-code'],
+  },
+  {
+    slug: 'api-key-setup',
+    title: 'הגדרת API Key ל-Claude Code — מדריך מלא',
+    metaDescription: 'איך ליצור ולהגדיר API Key ל-Claude Code. מדריך שלב אחרי שלב עם צילומי מסך.',
+    heroSubtitle: 'מאפס ועד API Key עובד',
+    sections: [
+      {
+        heading: 'מה זה API Key?',
+        content: `API Key הוא מפתח ייחודי שמזהה אתכם מול השרתים של Anthropic. הוא כמו סיסמה שמאפשרת ל-Claude Code לגשת למודלי Claude.
+
+יש שני מסלולים:
+1. מנוי Pro/Max — מתחברים עם חשבון claude.ai, בלי צורך ב-API key
+2. API — יוצרים API key ומשלמים לפי שימוש
+
+שני המסלולים עובדים מצוין. אם כבר יש לכם מנוי Pro, אתם לא צריכים API key.`,
+      },
+      {
+        heading: 'יצירת API Key',
+        content: `1. היכנסו ל-console.anthropic.com
+2. הירשמו או התחברו
+3. הוסיפו אמצעי תשלום (כרטיס אשראי)
+4. לכו לעמוד API Keys
+5. לחצו "Create Key"
+6. תנו שם למפתח (למשל "Claude Code")
+7. העתיקו את המפתח — הוא יוצג רק פעם אחת!
+
+חשוב: שמרו את המפתח במקום בטוח. אם תאבדו אותו, תצטרכו ליצור חדש.`,
+      },
+      {
+        heading: 'הגדרת ה-Key ב-Claude Code',
+        content: `יש כמה דרכים להגדיר את ה-API Key:
+
+דרך 1 — בהפעלה ראשונה:
+כשמריצים claude בפעם הראשונה, הוא שואל אם להתחבר עם חשבון או עם API key. בחרו API key והדביקו.
+
+דרך 2 — משתנה סביבה:
+export ANTHROPIC_API_KEY=sk-ant-...your-key-here
+claude
+
+דרך 3 — קובץ הגדרות:
+הוסיפו את המפתח בקובץ ההגדרות של Claude Code.
+
+הדרך הראשונה היא הפשוטה ביותר לרוב המשתמשים.`,
+      },
+      {
+        heading: 'אבטחה',
+        content: `• לעולם אל תשתפו את ה-API Key שלכם
+• אל תכניסו אותו לקוד שנמצא ב-Git
+• אם חושבים שהמפתח נחשף — צרו חדש ומחקו את הישן מיד
+• הגדירו spending limits ב-console.anthropic.com כדי למנוע הפתעות בחיוב`,
+      },
+    ],
+    relatedSlugs: ['installation', 'pricing', 'common-errors', 'beginners-guide'],
+  },
+];
+
+export function getGuideBySlug(slug: string): Guide | undefined {
+  return guides.find(g => g.slug === slug);
+}
+
+export function getRelatedGuides(guide: Guide): Guide[] {
+  return guide.relatedSlugs
+    .map(slug => guides.find(g => g.slug === slug))
+    .filter((g): g is Guide => g !== undefined);
+}
