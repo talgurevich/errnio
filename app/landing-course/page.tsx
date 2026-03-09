@@ -156,16 +156,16 @@ export default function LandingCoursePage() {
           <div className="grid gap-4">
             {[
               {
-                title: 'מפתחים ומתכנתים',
-                desc: 'שרוצים להכפיל את קצב העבודה שלהם עם AI',
+                title: 'כל מי שרוצה להיכנס לעולם ה-AI',
+                desc: 'לא צריך להיות מתכנת — מספיק סקרנות ורצון ללמוד',
               },
               {
-                title: 'יזמים ובעלי מוצר',
-                desc: 'שרוצים לבנות MVP או פיצ\'רים בלי להיות תלויים במפתח',
+                title: 'יזמים ובעלי עסקים',
+                desc: 'שרוצים לבנות דברים בעצמם בלי להיות תלויים במפתח',
               },
               {
-                title: 'אנשי טכנולוגיה',
-                desc: 'שמכירים את עולם ה-AI אבל עדיין לא עובדים עם Claude Code ביומיום',
+                title: 'אנשים עם חשיבה טכנולוגית',
+                desc: 'שמרגישים שה-AI משנה את הכללים ורוצים להיות חלק מזה',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 bg-gray-50 rounded-2xl p-5 md:p-6 border border-gray-100">
@@ -317,7 +317,7 @@ export default function LandingCoursePage() {
               },
               {
                 q: 'אני לא מתכנת, זה מתאים לי?',
-                a: 'Claude Code דורש הבנה בסיסית של Terminal ותכנות. אם אתם מתחילים לגמרי, צרו קשר ונבדוק ביחד.',
+                a: 'בהחלט! השיעור מותאם אישית לרמה שלכם. כל מה שצריך זה סקרנות ורצון ללמוד.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl p-5 md:p-6 border border-gray-100">
