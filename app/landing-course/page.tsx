@@ -63,7 +63,7 @@ export default function LandingCoursePage() {
 
           {/* Sub-headline */}
           <p className="text-lg md:text-2xl text-blue-100 mb-4 max-w-2xl mx-auto leading-relaxed">
-            למדו לכתוב קוד עם AI בצורה הכי יעילה שיש.
+            למדו לבנות עם AI בצורה הכי יעילה שיש.
             <br />
             <strong className="text-white">שיעור פרטי בזום, מותאם אישית לרמה שלכם.</strong>
           </p>
