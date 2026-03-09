@@ -129,7 +129,7 @@ export default function LandingCoursePage() {
               {
                 icon: '🔌',
                 title: 'טיפים מתקדמים',
-                desc: 'MCP servers, hooks, אוטומציות ועוד כלים שיחסכו לכם שעות עבודה',
+                desc: 'Skills, MCP servers, hooks, אוטומציות ועוד כלים שיחסכו לכם שעות עבודה',
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-gray-100">
@@ -289,6 +289,36 @@ export default function LandingCoursePage() {
       </section>
 
       {/* ============================================= */}
+      {/* PREREQUISITES */}
+      {/* ============================================= */}
+      <section className="py-10 md:py-12 px-5 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-purple-50 border border-purple-200 rounded-2xl p-5 md:p-6">
+            <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+              </svg>
+              מה צריך לפני השיעור?
+            </h3>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {[
+                'מחשב עם Terminal (Mac / Linux / Windows)',
+                'חשבון Anthropic (claude.ai) עם מנוי Pro או API key',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
+                  <svg className="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-500 text-xs mt-3">אין לכם חשבון? לא נורא — אעזור לכם להגדיר הכל בתחילת השיעור.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================= */}
       {/* FAQ */}
       {/* ============================================= */}
       <section className="py-12 md:py-16 px-5 bg-gray-50">
@@ -301,7 +331,7 @@ export default function LandingCoursePage() {
             {[
               {
                 q: 'מה צריך להכין לפני השיעור?',
-                a: 'מחשב עם Terminal (Mac/Linux/Windows), חשבון Anthropic עם API key. אשלח הנחיות מפורטות אחרי ההרשמה.',
+                a: 'מחשב עם Terminal (Mac/Linux/Windows) וחשבון Anthropic (claude.ai) עם מנוי Pro או API key. אשלח הנחיות מפורטות אחרי ההרשמה.',
               },
               {
                 q: 'איך משלמים?',
