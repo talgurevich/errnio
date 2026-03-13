@@ -32,7 +32,7 @@ const categories = [
   {
     title: 'מה אפשר לבנות',
     icon: '🏗️',
-    slugs: ['build-website', 'ecommerce'],
+    slugs: ['build-website', 'company-website', 'ecommerce'],
   },
   {
     title: 'למי זה מתאים',
