@@ -27,12 +27,12 @@ const categories = [
   {
     title: 'כלים מתקדמים',
     icon: '⚡',
-    slugs: ['mcp-servers', 'skills-hooks', 'vs-cursor-copilot'],
+    slugs: ['mcp-servers', 'skills-hooks', 'vs-cursor-copilot', 'terminal'],
   },
   {
     title: 'מה אפשר לבנות',
     icon: '🏗️',
-    slugs: ['build-website', 'company-website', 'ecommerce'],
+    slugs: ['build-website', 'company-website', 'ecommerce', 'supabase', 'vercel'],
   },
   {
     title: 'למי זה מתאים',
