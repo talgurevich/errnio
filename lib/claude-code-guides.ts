@@ -1122,6 +1122,447 @@ claude
     ],
     relatedSlugs: ['installation', 'pricing', 'common-errors', 'beginners-guide'],
   },
+  {
+    slug: 'terminal',
+    title: 'איך לעבוד עם Terminal — מדריך בעברית למתחילים',
+    metaDescription: 'מדריך Terminal בעברית. הפקודות שאתם חייבים לדעת, טיפים לעבודה יומיומית, ואיך זה מתחבר ל-Claude Code.',
+    heroSubtitle: 'ה-Terminal הוא לא מפחיד — צריך רק לדעת מאיפה להתחיל',
+    sections: [
+      {
+        heading: 'למה בכלל Terminal?',
+        content: `כשהתחלתי לעבוד עם Claude Code, הבנתי שאני חייב להכיר Terminal. אין מנוס. Claude Code רץ בתוכו, וכל פקודה שאתם מריצים — מ-git ועד npm — עוברת דרכו.
+
+אבל הנה החדשות הטובות: אתם לא צריכים להיות מומחי לינוקס. יש קבוצה קטנה של פקודות שמכסה 90% ממה שתעשו ביום-יום. את השאר Claude Code יעשה בשבילכם.
+
+אני מסביר כאן את מה שאני באמת משתמש בו. בלי תיאוריה מיותרת.`,
+      },
+      {
+        heading: 'איך פותחים Terminal',
+        content: `ב-Mac:
+• חפשו "Terminal" ב-Spotlight (Cmd + Space) — או פתחו דרך Applications > Utilities
+• אני ממליץ על iTerm2 — חינמי ונוח יותר
+
+ב-Windows:
+• הפתרון הכי טוב: התקינו Windows Terminal מ-Microsoft Store
+• חשוב: התקינו גם WSL (Windows Subsystem for Linux) — זה נותן לכם סביבת לינוקס אמיתית בתוך Windows
+• פתחו PowerShell כאדמין והריצו: wsl --install
+
+ב-Linux:
+• Ctrl + Alt + T — זהו, פתוח.
+
+ב-VS Code:
+• Ctrl + \` (backtick) פותח Terminal מובנה
+• אפשר לעבוד על הקוד וה-Terminal באותו חלון — ככה אני עובד רוב הזמן`,
+      },
+      {
+        heading: 'פקודות בסיסיות — מה שאני משתמש כל יום',
+        content: `ניווט בתיקיות:
+• cd שם-תיקיה — להיכנס לתיקיה
+• cd .. — לחזור תיקיה אחורה
+• cd ~ — לחזור לתיקיית הבית
+• pwd — להציג את הנתיב הנוכחי (איפה אני עכשיו?)
+• ls — להציג מה יש בתיקיה
+• ls -la — להציג הכל, כולל קבצים נסתרים
+
+עבודה עם קבצים:
+• mkdir שם — ליצור תיקיה חדשה
+• touch שם-קובץ — ליצור קובץ ריק
+• rm שם-קובץ — למחוק קובץ (זהירות — אין פח זבל!)
+• rm -rf שם-תיקיה — למחוק תיקיה עם הכל בפנים (זהירות כפולה!)
+• cp מקור יעד — להעתיק
+• mv מקור יעד — להעביר או לשנות שם
+
+טיפ שלי: אל תמחקו קבצים עם rm אם אתם לא בטוחים. אין Ctrl+Z ב-Terminal.`,
+      },
+      {
+        heading: 'פקודות שצריך בשביל Claude Code',
+        content: `npm / Node.js:
+• node -v — לבדוק שNode מותקן
+• npm -v — לבדוק שnpm מותקן
+• npm install — להתקין dependencies של פרויקט
+• npm run dev — להריץ שרת פיתוח
+• npm run build — לבנות את הפרויקט לפרודקשן
+• npx create-next-app@latest — ליצור פרויקט Next.js חדש
+
+Git (הבסיס):
+• git init — לאתחל repo חדש
+• git status — מה השתנה?
+• git add . — להוסיף הכל לstaging
+• git commit -m "הודעה" — לשמור את השינויים
+• git push — לדחוף לGitHub
+• git log --oneline — לראות היסטוריה בקצרה
+
+Claude Code:
+• claude — להפעיל את Claude Code
+• claude --version — לבדוק גרסה
+• npm install -g @anthropic-ai/claude-code — להתקין/לעדכן
+
+אלה 95% מהפקודות שאני משתמש ביום-יום. את השאר גוגל או Claude Code יפתרו.`,
+      },
+      {
+        heading: 'טיפים שחוסכים לי זמן',
+        content: `Tab — השלמה אוטומטית:
+התחילו להקליד שם קובץ או תיקיה ולחצו Tab. ה-Terminal ישלים אוטומטית. אם יש כמה אפשרויות — לחצו Tab פעמיים לרשימה.
+
+חץ למעלה — היסטוריה:
+חץ למעלה מציג את הפקודה הקודמת. אפשר לגלול אחורה כמה שרוצים. חוסך המון הקלדות.
+
+Ctrl + C — לעצור תהליך:
+משהו תקוע? npm run dev לא מפסיק? Ctrl + C עוצר הכל.
+
+Ctrl + L — ניקוי מסך:
+המסך מלא טקסט? Ctrl + L מנקה. הכל עדיין שם בזיכרון, רק המסך נקי.
+
+&& — שרשור פקודות:
+cd my-project && npm install && npm run dev
+שלוש פקודות בשורה אחת. הבאה רצה רק אם הקודמת הצליחה.
+
+alias — קיצורים:
+הוסיפו לקובץ ~/.bashrc או ~/.zshrc:
+alias dev="npm run dev"
+alias gs="git status"
+alias gc="git commit -m"
+עכשיו במקום להקליד את הפקודה המלאה, תקלידו רק dev.`,
+      },
+      {
+        heading: 'טעויות שעשיתי — שתוכלו להימנע מהן',
+        content: `1. הרצתי פקודות בתיקיה הלא נכונה
+אני מריץ npm install ומקבל שגיאה. מסתכל — אני בתיקיית הבית ולא בפרויקט. פתרון: תמיד תבדקו עם pwd איפה אתם.
+
+2. שכחתי sudo
+"Permission denied" על לינוקס/Mac? הוסיפו sudo לפני הפקודה. זה מריץ עם הרשאות אדמין.
+
+3. סגרתי Terminal באמצע תהליך
+היה לי npm run build שרץ, סגרתי את החלון, והכל נעצר. פתרון: אל תסגרו חלון Terminal שעובד על משהו.
+
+4. מחקתי קובץ בטעות עם rm
+אין פח מיחזור. מה שנמחק — נמחק. היום אני עושה git commit לפני כל פעולה מסוכנת.
+
+5. לא קראתי את הודעת השגיאה
+הרבה פעמים הפתרון כתוב בשגיאה עצמה. "Module not found" = צריך npm install. "Command not found" = צריך להתקין. תקראו את ההודעה לפני שנכנסים לפאניקה.`,
+      },
+      {
+        heading: 'Terminal + Claude Code — איך זה עובד ביחד',
+        content: `ככה נראה יום עבודה אמיתי שלי:
+
+1. פותח Terminal
+2. cd ~/projects/my-project — נכנס לפרויקט
+3. claude — מפעיל את Claude Code
+4. מתאר מה אני רוצה — "תבנה דף נחיתה עם Hero section וטופס"
+5. Claude Code כותב קוד, מריץ פקודות, ומעדכן קבצים
+6. אני פותח Tab חדש ב-Terminal ומריץ npm run dev כדי לראות את התוצאה
+7. חוזר ל-Tab של Claude Code ומבקש שיפורים
+
+Claude Code מריץ פקודות Terminal בשבילכם — git, npm, וכל מה שצריך. אתם לא חייבים לזכור הכל. אבל להבין מה קורה? זה הופך אתכם מכפתור "copy-paste" לאנשים שבאמת שולטים בפרויקט שלהם.`,
+      },
+    ],
+    relatedSlugs: ['installation', 'beginners-guide', 'what-is-claude-code', 'common-errors'],
+  },
+  {
+    slug: 'supabase',
+    title: 'איך לעבוד עם Supabase ו-Claude Code — מדריך מלא',
+    metaDescription: 'מדריך Supabase בעברית. איך לבנות backend מלא עם Claude Code — דאטאבייס, אותנטיקציה, storage, ו-API.',
+    heroSubtitle: 'Backend מלא בלי לכתוב שרת — Supabase + Claude Code',
+    sections: [
+      {
+        heading: 'למה Supabase?',
+        content: `הייתי צריך דאטאבייס לפרויקט של לקוח. בעבר הייתי מקים שרת Express, מגדיר PostgreSQL, כותב API routes, מטפל באותנטיקציה — ימים של עבודה. עם Supabase סיימתי את כל זה בשעה.
+
+Supabase זה בעצם Firebase אבל עם PostgreSQL אמיתי. אתם מקבלים:
+• דאטאבייס PostgreSQL — הדבר האמיתי, לא NoSQL מוגבל
+• אותנטיקציה — הרשמה, התחברות, Google login, magic links
+• Storage — אחסון קבצים (תמונות, מסמכים)
+• Realtime — עדכונים בזמן אמת
+• Edge Functions — לוגיקת שרת בלי שרת
+• REST API אוטומטי — כל טבלה מקבלת API בחינם
+
+ה-tier החינמי מספיק לרוב הפרויקטים. שני פרויקטים בחינם, 500MB דאטאבייס, 1GB storage.`,
+      },
+      {
+        heading: 'הקמת פרויקט Supabase',
+        content: `שלב 1 — יצירת חשבון:
+היכנסו ל-supabase.com, הירשמו עם GitHub (הכי מהיר).
+
+שלב 2 — פרויקט חדש:
+לחצו "New Project", בחרו שם, סיסמה לדאטאבייס, ואזור (בחרו הכי קרוב — eu-central-1 לאירופה).
+
+שלב 3 — שמרו את המפתחות:
+בהגדרות הפרויקט (Settings > API) תמצאו:
+• Project URL — כתובת הAPI שלכם
+• anon key — מפתח ציבורי לצד הלקוח
+• service_role key — מפתח סודי! רק לצד שרת!
+
+שלב 4 — קובץ env:
+צרו קובץ .env.local בפרויקט:
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+
+חשוב: ה-service_role key לעולם לא צריך להיות ב-NEXT_PUBLIC. הוא סודי.`,
+      },
+      {
+        heading: 'הפרומפט שאני נותן ל-Claude Code',
+        content: `הנה הפרומפט שמקים הכל בבת אחת:
+
+"אני רוצה לחבר את הפרויקט ל-Supabase. הנה הפרטים:
+• Supabase URL: [הURL שלכם]
+• Framework: Next.js 15 App Router
+• צריך: @supabase/supabase-js ו-@supabase/ssr
+
+תעשה את הדברים הבאים:
+1. התקן את הpackages
+2. צור lib/supabase/client.ts — client-side Supabase client
+3. צור lib/supabase/server.ts — server-side Supabase client עם cookies
+4. צור middleware.ts שמרענן את הsession
+5. תוודא שה-.env.local כבר מוגדר ב-.gitignore"
+
+Claude Code יתקין הכל, יגדיר client ו-server clients, ויכין middleware. תוך דקות יש לכם חיבור עובד.`,
+      },
+      {
+        heading: 'בניית טבלאות — פרומפטים מוכנים',
+        content: `טבלת משתמשים (profiles):
+"צור ב-Supabase טבלת profiles עם: id (uuid, מקושר ל-auth.users), full_name (text), email (text), avatar_url (text), created_at (timestamp). תוסיף RLS policy שמאפשרת למשתמש לקרוא ולערוך רק את הפרופיל שלו. צור trigger שיוצר פרופיל אוטומטית כשמשתמש נרשם."
+
+טבלת מוצרים:
+"צור טבלת products עם: id (uuid), name (text), description (text), price (numeric), image_url (text), category (text), is_active (boolean), created_at. תוסיף RLS — כולם יכולים לקרוא מוצרים פעילים, רק אדמין יכול לערוך."
+
+טבלת הזמנות:
+"צור טבלת orders עם: id, user_id (מקושר ל-profiles), items (jsonb), total (numeric), status (enum: pending/paid/shipped/delivered), created_at. צור גם טבלת order_items עם: id, order_id, product_id, quantity, price. RLS — משתמש רואה רק את ההזמנות שלו."
+
+את ה-SQL אני מריץ ב-SQL Editor של Supabase, או שClaude Code יוצר migration files.`,
+      },
+      {
+        heading: 'אותנטיקציה — הרשמה והתחברות',
+        content: `הפרומפט שאני משתמש:
+
+"תבנה מערכת אותנטיקציה מלאה עם Supabase Auth:
+1. דף הרשמה — אימייל וסיסמה, שם מלא
+2. דף התחברות — אימייל וסיסמה
+3. כפתור התחברות עם Google (OAuth)
+4. דף שכחתי סיסמה
+5. middleware שמגן על דפים מסוימים (dashboard, profile)
+6. כפתור התנתקות ב-header
+7. שמירת session עם cookies (SSR-safe)
+
+כל הטקסט בעברית. טיפול בשגיאות — אימייל כבר קיים, סיסמה חלשה, אימייל לא תקין."
+
+זה נותן לכם מערכת הרשמה מלאה. Claude Code ייצור את הדפים, הלוגיקה, ואת ה-middleware שמגן על routes.
+
+טיפ: להתחברות עם Google, צריך להגדיר OAuth ב-Google Cloud Console ולהוסיף את ה-credentials בהגדרות Supabase (Authentication > Providers).`,
+      },
+      {
+        heading: 'Storage — העלאת קבצים',
+        content: `Supabase Storage מאפשר להעלות ולאחסן קבצים. אני משתמש בזה לתמונות פרופיל, תמונות מוצרים, ומסמכים.
+
+"תבנה רכיב העלאת תמונות עם Supabase Storage:
+1. צור bucket בשם 'avatars' (public)
+2. רכיב React שמאפשר לבחור תמונה, לראות תצוגה מקדימה, ולהעלות
+3. הגבלה — רק תמונות, עד 2MB
+4. לאחר העלאה — עדכן את avatar_url בטבלת profiles
+5. הצג את התמונה הנוכחית עם fallback לאווטר ברירת מחדל"
+
+RLS ל-Storage:
+• avatars bucket — כל אחד יכול לקרוא (public), רק בעל החשבון יכול להעלות/למחוק
+• documents bucket — רק בעל החשבון יכול לקרוא/לכתוב (private)
+
+חשוב: צרו את ה-buckets דרך ממשק Supabase (Storage > New Bucket) לפני שכותבים קוד.`,
+      },
+      {
+        heading: 'טעויות שעשיתי עם Supabase',
+        content: `1. שכחתי RLS
+יצרתי טבלה, הכנסתי נתונים, הכל עבד. ואז הבנתי שכל אחד יכול לראות הכל. Supabase מפעילה RLS כברירת מחדל, אבל בלי policies — אף אחד לא יכול לגשת. ברגע שהוספתי policy רחב מדי — חשפתי מידע.
+פתרון: תמיד הגדירו policies ספציפיות. "משתמש רואה רק את הנתונים שלו."
+
+2. חשפתי את service_role key
+שמתי את ה-service key ב-NEXT_PUBLIC. זו טעות ביטחונית חמורה — הוא עוקף RLS.
+פתרון: service_role רק בצד שרת (Server Components, API routes). anon key בצד לקוח.
+
+3. לא הגדרתי types
+עבדתי בלי TypeScript types ל-Supabase. כל שאילתה הייתה any. באגים בכל מקום.
+פתרון: "תריץ npx supabase gen types typescript ותעדכן את database.types.ts"
+
+4. שכחתי indexes
+הדאטאבייס היה איטי. 10,000 שורות וכל שאילתה לקחה שניות.
+פתרון: "תוסיף index על כל עמודה שמשמשת ב-WHERE או ב-ORDER BY."
+
+5. לא עשיתי backup
+שיניתי schema ומחקתי עמודה עם נתונים. אין דרך חזרה.
+פתרון: לפני כל שינוי ב-schema — export של הנתונים.`,
+      },
+    ],
+    relatedSlugs: ['build-website', 'company-website', 'terminal', 'vercel'],
+  },
+  {
+    slug: 'vercel',
+    title: 'איך להעלות אתר ל-Vercel עם Claude Code — מדריך מלא',
+    metaDescription: 'מדריך Vercel בעברית. מ-deploy ראשון ועד דומיין מותאם — הכל עם Claude Code. פרומפטים מוכנים.',
+    heroSubtitle: 'מהקוד שלכם לאתר חי באינטרנט — תוך דקות',
+    sections: [
+      {
+        heading: 'למה Vercel?',
+        content: `כשסיימתי לבנות אתר ללקוח, הייתי צריך להעלות אותו לאוויר. בדקתי כמה אפשרויות — AWS, DigitalOcean, Netlify. בסוף בחרתי ב-Vercel ומאז לא הסתכלתי אחורה.
+
+Vercel בנויה בדיוק בשביל Next.js (הם יצרו את Next.js). מה שמקבלים:
+• Deploy אוטומטי — עושים push ל-GitHub, האתר מתעדכן לבד
+• Preview deployments — כל pull request מקבל URL ייחודי לבדיקה
+• CDN עולמי — האתר מהיר בכל מקום בעולם
+• HTTPS חינם — SSL אוטומטי, בלי הגדרות
+• Serverless functions — API routes שרצים בענן
+• Analytics — סטטיסטיקות מובנות
+
+ה-Hobby plan חינמי ומספיק לפרויקטים אישיים ולאתרי לקוחות קטנים. ה-Pro plan (20$ לחודש) נותן יותר bandwidth ופיצ׳רים לצוותים.`,
+      },
+      {
+        heading: 'הגדרה ראשונית — פעם אחת',
+        content: `שלב 1 — חשבון:
+היכנסו ל-vercel.com והירשמו עם GitHub (הכי נוח — מקשר אוטומטית את ה-repos).
+
+שלב 2 — Vercel CLI:
+npm install -g vercel
+
+שלב 3 — התחברות:
+vercel login
+בחרו את שיטת ההתחברות (GitHub מומלץ). ייפתח חלון בדפדפן לאישור.
+
+שלב 4 — בדיקה:
+vercel --version
+אם מקבלים מספר גרסה — הכל מוכן.
+
+זה הכל. הגדרה חד-פעמית. מעכשיו כל deploy הוא פקודה אחת.`,
+      },
+      {
+        heading: 'Deploy ראשון — הפרומפט שלי',
+        content: `יש לי שני מסלולים. אני בוחר לפי הפרויקט:
+
+מסלול 1 — דרך GitHub (מומלץ):
+"הפרויקט מוכן. תעשה את הדברים הבאים:
+1. תוודא ש-next build עובר בלי שגיאות
+2. תוודא שאין secrets ב-codebase (חפש .env values בקוד)
+3. צור .gitignore תקין
+4. commit ו-push ל-GitHub"
+
+אחרי ה-push, נכנסים ל-Vercel dashboard, לוחצים "Add New Project", בוחרים את ה-repo, ו-Vercel מזהה שזה Next.js ומגדיר הכל אוטומטית.
+
+מסלול 2 — דרך CLI:
+"הפרויקט מוכן. תוודא ש-next build עובר בלי שגיאות."
+ואז ב-Terminal:
+vercel
+Vercel ישאל כמה שאלות (שם פרויקט, הגדרות), ותוך דקה האתר באוויר.
+
+לproduction:
+vercel --prod
+
+אני מעדיף מסלול 1. ברגע שהrepo מחובר, כל push ל-main עושה deploy אוטומטי.`,
+      },
+      {
+        heading: 'משתני סביבה — חשוב!',
+        content: `אם הפרויקט שלכם משתמש ב-.env.local (למשל Supabase keys, API keys), צריך להוסיף אותם גם ב-Vercel.
+
+דרך ה-Dashboard:
+1. Project Settings > Environment Variables
+2. הוסיפו כל משתנה — שם וערך
+3. בחרו באילו סביבות: Production, Preview, Development
+
+דרך CLI:
+vercel env add NEXT_PUBLIC_SUPABASE_URL
+vercel env add NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+הפרומפט שלי:
+"תייצר לי רשימה של כל משתני הסביבה שהפרויקט צריך. תסתכל על כל קובץ שמשתמש ב-process.env ותרשום את כל המשתנים עם תיאור של כל אחד."
+
+Claude Code סורק את הפרויקט ונותן רשימה מסודרת. אני מעתיק ל-Vercel.
+
+טעות נפוצה: לשכוח להוסיף env vars ל-Vercel ואז האתר עולה שבור. תמיד תבדקו.`,
+      },
+      {
+        heading: 'דומיין מותאם אישית',
+        content: `אתר על yoursite.vercel.app זה בסדר לפיתוח, אבל ללקוח צריך דומיין אמיתי.
+
+שלב 1 — קנו דומיין:
+אני קונה ב-Namecheap או Cloudflare. מחירים סבירים, ממשק נוח.
+
+שלב 2 — הוסיפו ל-Vercel:
+Project Settings > Domains > Add Domain
+הקלידו את הדומיין, למשל mycompany.co.il
+
+שלב 3 — הגדרות DNS:
+Vercel ייתן לכם רשומות DNS להוסיף. בדרך כלל:
+• A record: 76.76.21.21
+• CNAME record: cname.vercel-dns.com
+
+היכנסו לממשק של ספק הדומיין והוסיפו את הרשומות.
+
+שלב 4 — חכו:
+DNS לוקח בין דקות לשעות להתעדכן. Vercel יראה לכם את הסטטוס ויפיק SSL אוטומטית.
+
+טיפ: הגדירו גם את www.yourdomain.com שיפנה לדומיין הראשי (או להפך). Vercel עושה את זה בלחיצה.`,
+      },
+      {
+        heading: 'Preview Deployments — הפיצ׳ר שהכי חוסך לי',
+        content: `כל pull request ב-GitHub מקבל אוטומטית URL ייחודי מ-Vercel. זה נראה ככה:
+my-project-git-feature-branch-username.vercel.app
+
+למה זה גדול:
+• לקוח יכול לראות שינויים לפני שהם עולים לאוויר
+• אני יכול לבדוק על מובייל בלי להריץ שרת מקומי
+• כל גרסה נשמרת — אפשר להשוות בין גרסאות
+
+ככה אני עובד:
+1. יוצר branch חדש: git checkout -b feature/new-homepage
+2. עובד עם Claude Code על השינויים
+3. פותח PR ב-GitHub
+4. Vercel מייצר preview URL
+5. שולח ללקוח לבדיקה
+6. הלקוח מאשר — עושה merge ל-main
+7. Vercel עושה deploy אוטומטי לproduction
+
+שיטה הזו חוסכת לי "רגע, תבדוק עכשיו... לא, חכה... עכשיו תבדוק". הלקוח בודק מתי שנוח לו.`,
+      },
+      {
+        heading: 'פרומפטים לפני deploy — הצ׳קליסט שלי',
+        content: `לפני כל העלאה לproduction, אני מריץ את הפרומפטים האלה:
+
+בדיקת build:
+"תריץ next build ותתקן כל שגיאה. אם יש TypeScript errors או ESLint warnings — תתקן הכל."
+
+בדיקת ביצועים:
+"תוודא: כל התמונות משתמשות ב-next/image, אין imports מיותרים, CSS לא משומש מנוקה, dynamic imports לcomponents כבדים."
+
+בדיקת SEO:
+"תוודא שלכל דף יש: title, description, OG tags, canonical URL. צור sitemap.xml ו-robots.txt אם אין."
+
+בדיקת אבטחה:
+"תחפש בכל הפרויקט: API keys חשופים, secrets בצד לקוח, console.logs שצריך למחוק, TODO comments."
+
+בדיקת מובייל:
+"תעבור על כל הדפים ותוודא שאין overflow אופקי, טקסט חתוך, או כפתורים קטנים מדי במובייל."
+
+אחרי שהכל עובר — git push ו-Vercel עושה את השאר.`,
+      },
+      {
+        heading: 'טעויות שעשיתי עם Vercel',
+        content: `1. שכחתי environment variables
+האתר עלה, הכל נראה טוב, אבל שום דבר לא עובד — טפסים, התחברות, API calls. כי שכחתי להוסיף את ה-env vars ב-Vercel.
+פתרון: תמיד תשוו את .env.local מול Vercel Environment Variables.
+
+2. Build נכשל ולא הבנתי למה
+מקומית הכל עבד, ב-Vercel — שגיאה. הסיבה בדרך כלל: case sensitivity בשמות קבצים (Mac לא רגיש, Linux כן), או dependency שלא ב-package.json.
+פתרון: "תריץ next build מקומית ותוודא שעובר נקי."
+
+3. לא הגדרתי redirects
+שיניתי מבנה URL ולינקים ישנים נשברו. גוגל עדיין שולח אנשים ל-URL הישן.
+פתרון: "צור next.config.js עם redirects מהURLs הישנים לחדשים."
+
+4. שילמתי על bandwidth מיותר
+תמונות כבדות (5MB כל אחת) אכלו bandwidth. חשבון של 50$ בחודש על אתר קטן.
+פתרון: תמיד next/image עם optimization, ותמונות webp.
+
+5. לא השתמשתי ב-preview deployments
+דחפתי ישירות ל-main ושברתי את האתר בproduction.
+פתרון: תמיד עבדו ב-branches ובדקו ב-preview לפני merge.`,
+      },
+    ],
+    relatedSlugs: ['build-website', 'company-website', 'supabase', 'terminal'],
+  },
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {
